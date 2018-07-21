@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Xenon Boostrap Admin Panel" />
+    <meta name="author" content="" />
+
+    <title>手播课运营平台</title>
+    <link rel="Shortcut icon" href="../assets/images/icon-shouboke16.ico">
+    <!--<link rel="stylesheet" href="http://fonts.useso.com/css?family=Arimo:400,700,400italic">-->
+    <link rel="stylesheet" href="../assets/css/fonts/linecons/css/linecons.css">
+    <link rel="stylesheet" href="../assets/css/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/xenon-core.css">
+    <link rel="stylesheet" href="../assets/css/xenon-forms.css">
+    <link rel="stylesheet" href="../assets/css/xenon-components.css">
+    <link rel="stylesheet" href="../assets/css/xenon-skins.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-switch.css"/>
+    <script src="../assets/js/jquery-1.11.1.min.js"></script>
+    <script src="../assets/js/jquery.extend.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/validSystem.js"></script>
+    <script src="../assets/js/jquery.table2excel.js"></script>
+    <script src="../assets/js/bootstrap-switch.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--ckplayer-->
+    <script type="text/javascript" src="ckplayer/ckplayer.js"></script>
+    <!--flowplayer，改用ckplayer-->
+    <!--<link rel="stylesheet" href="flowplayer/skin/functional.css">-->
+    <!--<script src="flowplayer/flowplayer.js"></script>-->
+</head>
+<body class="page-body">
+
+<div class="settings-pane">
+
+    <a href="#" data-toggle="settings-pane" data-animate="true">
+        &times;
+    </a>
+
+    <div class="settings-pane-inner">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="user-info">
+
+                    <div class="user-image">
+                        <a href="extra-profile.html">
+                            <img src="../assets/images/user-2.png" class="img-responsive img-circle" />
+                        </a>
+                    </div>
+
+                    <div class="user-details">
+
+                        <h3>
+                            <a href="extra-profile.html">John Smith</a>
+
+                            <!-- Available statuses: is-online, is-idle, is-busy and is-offline -->
+                            <span class="user-status is-online"></span>
+                        </h3>
+
+                        <p class="user-title">Web Developer</p>
+
+                        <div class="user-links">
+                            <a href="extra-profile.html" class="btn btn-primary">Edit Profile</a>
+                            <a href="extra-profile.html" class="btn btn-success">Upgrade</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-8 link-blocks-env">
+
+                <div class="links-block left-sep">
+                    <h4>
+                        <span>Notifications</span>
+                    </h4>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk1" />
+                            <label for="sp-chk1">Messages</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk2" />
+                            <label for="sp-chk2">Events</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk3" />
+                            <label for="sp-chk3">Updates</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk4" />
+                            <label for="sp-chk4">Server Uptime</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="links-block left-sep">
+                    <h4>
+                        <a href="#">
+                            <span>Help Desk</span>
+                        </a>
+                    </h4>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Support Center
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Submit a Ticket
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Domains Protocol
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Terms of Service
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+
+<!-- Add "fixed" class to make the sidebar fixed always to the browser viewport. -->
+<!-- Adding class "toggle-others" will keep only one menu item open at a time. -->
+<!-- Adding class "collapsed" collapse sidebar root elements and show only icons. -->
+<div class="sidebar-menu toggle-others fixed">
+
+    <div class="sidebar-menu-inner">
+
+        <header class="logo-env">
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="javascript:void(0)" class="logo-expanded">
+                    <img src="../assets/images/icon220x60.png" width="160" alt="" />
+                </a>
+
+                <a  href="javascript:void(0)" class="logo-collapsed">
+                    <img src="../assets/images/icon60.png" width="40" alt="" />
+                </a>
+            </div>
+
+            <!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+            <div class="mobile-menu-toggle visible-xs">
+                <!--<a href="#" data-toggle="user-info-menu">-->
+                <!--<i class="fa-bell-o"></i>-->
+                <!--<span class="badge badge-success">7</span>-->
+                <!--</a>-->
+
+                <a href="#" data-toggle="mobile-menu">
+                    <i class="fa-bars"></i>
+                </a>
+            </div>
+
+            <!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
+            <!--<div class="settings-icon">-->
+            <!--<a href="#" data-toggle="settings-pane" data-animate="true">-->
+            <!--<i class="linecons-cog"></i>-->
+            <!--</a>-->
+            <!--</div>-->
+        </header>
+
+        <ul id="main-menu" class="main-menu">
+            <!-- add class "multiple-expanded" to allow multiple submenus to open -->
+            <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+        </ul>
+    </div>
+
+</div>
+
+<div class="main-content">
+
+<!-- User Info, Notifications and Menu Bar -->
+<nav class="navbar user-info-navbar" role="navigation">
+    <!-- Right links for user info navbar -->
+    <ul class="user-info-menu right-links list-inline list-unstyled">
+        <li class="dropdown user-profile">
+            <a href="#" data-toggle="dropdown">
+                <img src="../assets/images/user-4.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
+							<span>
+								<span id="username"></span>
+								<i class="fa-angle-down"></i>
+							</span>
+            </a>
+            <ul class="dropdown-menu user-profile-menu list-unstyled" style="width:126px">
+                <li>
+                    <a href="../editpwd.html" id="editpwd">
+                        <i class="fa-eyedropper"></i>
+                        修改密码
+                    </a>
+                </li>
+                <li class="last">
+                    <a href="../login.html" id="logout">
+                        <i class="fa-lock"></i>
+                        退出登录
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <script>
+            $(function(){
+                $("#username").html($.fn.getSession('username'));
+                $("#logout").click(function(){//退出登录保留记住的用户,密码,token过期
+                    $.fn.setSession('token',null);
+                })
+            })
+        </script>
+    </ul>
+
+</nav>
+
+<div class="row allvideo">
+    <div class="col-sm-1 active" id="index" style="margin-left: 15px;">首页设置</div>
+    <div class="col-sm-1" id="selected">精选课程</div>
+    <div class="col-sm-1" id="activity">活动视频</div>
+    <div class="col-sm-1" id="distribute">分销课程</div>
+    <div class="col-sm-1" id="liveAnswer">直播答题</div>
+    <!--<div class="col-sm-1" id="guess">猜你喜欢</div>-->
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <!-- Removing search and results count filter -->
+        <div class="panel panel-default" id="allTab">
+            <!--首页课程列表-->
+            <div id="indexList" class="panel-body">
+                <table class="table table-bordered table-striped" id="indexListTab">
+                    <thead>
+                    <tr>
+                        <th>标题</th>
+                        <th>开课人</th>
+                        <th>开课时间</th>
+                        <th class="no-sorting">视频</th>
+                        <th>收费(元)</th>
+                        <th>观看范围</th>
+                        <th>播放状态</th>
+                        <th>分类</th>
+                        <!-- <th>报名列表</th> -->
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="indexListTbody" class="middle-align">
+                    </tbody>
+                </table>
+            </div>
+            <!--精选列表-->
+            <div id="selectedList" class="panel-body">
+                <table class="table table-bordered table-striped" id="selectedListTab">
+                    <thead>
+                    <tr>
+                        <th>标题</th>
+                        <th>开课人</th>
+                        <th>开课时间</th>
+                        <th class="no-sorting">视频</th>
+                        <th>收费(元)</th>
+                        <th>观看范围</th>
+                        <th>播放状态</th>
+                        <th>分类</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="selectedListTbody" class="middle-align">
+                    </tbody>
+                </table>
+            </div>
+            <!--精选置顶列表-->
+            <div id="selectedStickList" class="panel-body">
+                <h4 style="margin-bottom: 30px">精选置顶课程</h4>
+                <table class="table table-bordered table-striped" id="selectedStickListTab">
+                    <thead>
+                    <tr>
+                        <th>标题</th>
+                        <th>开课人</th>
+                        <th>开课时间</th>
+                        <th class="no-sorting">视频</th>
+                        <th>收费(元)</th>
+                        <th>观看范围</th>
+                        <th>播放状态</th>
+                        <th>分类</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="selectedStickListTbody" class="middle-align">
+                    </tbody>
+                </table>
+            </div>
+            <!--活动列表-->
+            <div id="activityList" class="panel-body">
+                <table class="table table-bordered table-striped" id="activityListTab">
+                    <thead>
+                    <tr>
+                        <th>标题</th>
+                        <th>开课人</th>
+                        <th>开课时间</th>
+                        <th class="no-sorting">视频</th>
+                        <th>收费(元)</th>
+                        <th>观看范围</th>
+                        <th>播放状态</th>
+                        <th>分类</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="activityListbody" class="middle-align">
+                    </tbody>
+                </table>
+            </div>
+            <!--活动置顶列表-->
+            <div id="activityStickList" class="panel-body">
+                <h4 style="margin-bottom: 30px">活动置顶课程</h4>
+                <table class="table table-bordered table-striped" id="activityStickListTab">
+                    <thead>
+                    <tr>
+                        <th>标题</th>
+                        <th>开课人</th>
+                        <th>开课时间</th>
+                        <th class="no-sorting">视频</th>
+                        <th>收费(元)</th>
+                        <th>观看范围</th>
+                        <th>播放状态</th>
+                        <th>分类</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="activityStickListbody" class="middle-align">
+                    </tbody>
+                </table>
+            </div>
+            <!--分销课程-->
+            <div id="distributeList" class="panel-body">
+                <table class="table table-bordered table-striped" id="distributeListTab">
+                    <thead>
+                    <tr>
+                        <th>标题</th>
+                        <th>开课人</th>
+                        <th>开课时间</th>
+                        <th class="no-sorting">视频</th>
+                        <th>价格(元)</th>
+                        <th>观看范围</th>
+                        <th>播放状态</th>
+                        <th>分类</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="distributeListbody" class="middle-align">
+                    </tbody>
+                </table>
+            </div>
+            <!--直播答题-->
+            <div id="liveAnswerList" class="panel-body">
+                <div id="switch" style="float: right">
+                    <span>首页图标：</span>
+                    <input type="checkbox" name="quizRaceStatus">
+                    <span style="margin-left: 15px">直播答题验证码：</span>
+                    <input type="checkbox" name="quizRaceNeedSubscribe">
+                </div>
+                <table class="table table-bordered table-striped" id="liveAnswerListTab">
+                    <thead>
+                    <tr>
+                        <th>标题</th>
+                        <th>开课时间</th>
+                        <th class="no-sorting">视频</th>
+                        <th>播放状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="liveAnswerListbody" class="middle-align">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Footer -->
+<footer class="main-footer footer-type-1">
+
+    <div class="footer-inner">
+
+        <!-- Add your copyright text here -->
+        <div class="footer-text">
+            &copy; 2016
+            <strong>LYCAM+</strong>
+        </div>
+
+
+        <!-- Go to Top Link, just add rel="go-top" to any link to add this functionality -->
+        <div class="go-up">
+
+            <a href="#" rel="go-top">
+                <i class="fa-angle-up"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+</div>
+</div>
+
+<div class="page-loading-overlay">
+    <div class="loader-2"></div>
+</div>
+
+<!--子课程列表-->
+<div class="modal fade" id="childListPanel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">子课程列表</h4>
+            </div>
+            <div class="modal-body">
+                <div id="childList" class="panel-body">
+                    <table class="table table-bordered table-striped" id="childListTab">
+                        <thead>
+                        <tr>
+                            <th>目录</th>
+                            <th>开课时间</th>
+                            <th>课程链接</th>
+                            <th>课程状态</th>
+                            <!--<th>电话号码</th>-->
+                            <!--<th>报名来源</th>-->
+                        </tr>
+                        <!--<button id="exportList" class="btn btn-default" style="border-radius: 3px;float: right">导出Excel</button>-->
+                        </thead>
+                        <tbody id="childListbody" class="middle-align">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--播放视频-->
+<div class="modal fade" id="playThisVideo">
+    <div class="modal-dialog" style="padding: 0">
+        <button type="button" style="position: relative;right:-10px" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <div class="modal-content" id="video" style="width: 100%;height: 400px">
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!--报名列表-->
+<div class="modal fade" id="reportListPanel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">报名列表</h4>
+            </div>
+            <div class="modal-body">
+                <div id="reportList" class="panel-body">
+                    <table class="table table-bordered table-striped" id="reportListTab">
+                        <thead>
+                        <tr>
+                            <!--<th>用户ID</th>-->
+                            <th>用户名称</th>
+                            <th class="sorting_1">用户头像</th>
+                            <th>电话号码</th>
+                            <!--<th>报名来源</th>-->
+                        </tr>
+                        <button id="exportList" class="btn btn-default" style="border-radius: 3px;float: right">导出Excel</button>
+                        </thead>
+                        <tbody id="reportListbody" class="middle-align">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--邀请卡列表-->
+<div class="modal fade" id="invitationCardPanel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">邀请卡列表</h4>
+            </div>
+            <div class="modal-body">
+                <div id="invitationCard" class="panel-body">
+                    <table class="table table-bordered table-striped" id="invitationCardTab">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>创建时间</th>
+                            <th>优惠折扣</th>
+                            <th>邀请卡总数</th>
+                            <th>已使用邀请卡数</th>
+                            <th>实付价格</th>
+                            <th>备注</th>
+                        </tr>
+                        </thead>
+                        <tbody id="invitationCardBody" class="middle-align">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--课程分销商列表-->
+<div class="modal fade" id="distributorPanel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">分销课程分销商列表</h4>
+            </div>
+            <div class="modal-body">
+                <div id="distributor" class="panel-body">
+                    <table class="table table-bordered table-striped" id="distributorTab">
+                        <thead>
+                        <tr>
+                            <th>昵称</th>
+                            <th>联系方式</th>
+                            <th>注册时间</th>
+                            <th>成交笔数</th>
+                            <th>分销收益</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="distributorBody" class="middle-align">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--课程分销商订单列表-->
+<div class="modal fade" id="disOrderPanel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">分销课程详情</h4>
+            </div>
+            <div class="modal-body">
+                <div id="disOrder" class="panel-body">
+                    <table class="table table-bordered table-striped" id="disOrderTab">
+                        <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>联系方式</th>
+                            <th>课程价格</th>
+                            <th>优惠折扣</th>
+                            <th>购买价格</th>
+                            <th>分销比例</th>
+                            <th>分销支出</th>
+                            <th>购买渠道</th>
+                        </tr>
+                        </thead>
+                        <tbody id="disOrderBody" class="middle-align">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--编辑分类-->
+<div class="modal fade" id="editStreamCategory">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">修改视频分类</h4>
+            </div>
+            <div class="modal-body">
+                <form id="streamForm">
+                    <div class="form-group">
+                        <label for="streamName">视频名称</label>
+                        <input type="text" class="form-control" name="streamName" id="streamName" placeholder="视频名称" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>请选择分类</label>
+                        <select name="category-select" id="category-select"></select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" id="streamId-input">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" id="suretoEdit" class="btn btn-primary">修改</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="../assets/js/menu.js"></script>
+<script type="text/javascript">
+var _url='http://sbkt-port-1178495353.cn-north-1.elb.amazonaws.com.cn/';
+$(function(){
+    buildMenu(10);//统一通过menu.js创建菜单
+    var _this={};
+    /*****************分配视频表*****************/
+        //默认展示首页
+
+    $("#indexList").show()
+    $("#selectedList").hide()
+    $("#selectedStickList").hide()
+    $("#activityList").hide()
+    $("#activityStickList").hide()
+    $("#distributeList").hide()
+    $("#liveAnswerList").hide()
+    $(".allvideo").on("click","div",function(){
+        $('#playThisVideo').modal('hide');
+        $(".allvideo div.active")&&$(".allvideo div.active").removeClass("active");
+        $(this).addClass("active");
+        var id=$(this).attr("id");
+        $("#indexList").hide();
+        $("#distributeList").hide();
+        $("#liveAnswerList").hide()
+        $("#selectedList").hide();
+        $("#activityList").hide();
+        $("#selectedStickList").hide();
+        $("#activityStickList").hide();
+        $("#guessList").hide();
+//        $("#add"+id+"HotBtn").show();
+        $("#"+id+"List").show();
+        $("#"+id+"StickList").show();
+        _this.status=id
+    });
+
+
+
+    //获取列表
+    getIndexList();
+    getSelectedList();
+    getActivityList();
+    getSelectedStickList();
+    getActivityStickList();
+    getGuessList();
+    getDistributeList();
+    getLiveAnswerList();
+
+    //查看视频
+    $("#allTab").on('click','.tabImg img',function(){
+        var url=$(this).attr("videoUrls");
+        var videoObject = {
+            container: '#video', //容器的ID或className
+            variable: 'player',//播放函数名称
+            flashplayer:true,
+            poster:'',//封面图片
+            video: url
+        };
+        var player = new ckplayer(videoObject);
+//        var status=$(this).attr("status");
+//        console.log(status)
+//        if(status=='over'){
+//            _this.player.load({
+//                sources: [
+//                    { type: "application/x-mpegurl", src: url }
+//                ]
+//            });
+//        }
+//        if(status=='live'){
+//            _this.player.load({
+//                sources: [
+//                    { type: "video/flash", src: url }
+//                ]
+//            });
+//        }
+
+    });
+    $("#allTab").on('click', 'span.seriesTitle', function(e){//查看子课程列表
+        getChildList(e);
+    })
+    //查看子课程视频
+    $("#childListPanel").on('click','.playVideo',function(){
+        var url=$(this).attr("videoUrls");
+        var videoObject = {
+            container: '#video', //容器的ID或className
+            variable: 'player',//播放函数名称
+            flashplayer:true,
+            poster:'',//封面图片
+            video: url
+        };
+        var player = new ckplayer(videoObject);
+    });
+    $("#playThisVideo").on('hidden.bs.modal',function(){
+//        _this.player.stop();
+//        _this.player.unload();
+    })
+    $("#allTab").on('click','span.handleHot',function(){
+        var choiceTeamId=$(this).attr('id');
+        handleHot(choiceTeamId);
+    });
+
+    // 置顶按钮被点击
+    $("#allTab").on('click', 'span.handleStick', function() {
+        var choiceId = $(this).attr('id');
+        var streamId = choiceId.substr(6);
+        handleStick(streamId);
+    });
+
+    $("#suretoEdit").on("click",function(){
+         var streamId = $("#streamId-input").val() || "";
+         var categoryName = $("#category-select").val() || "其他";
+    
+         $.ajax({
+            type: "PUT",
+            data: {
+                streamId: streamId,
+                category:categoryName
+            },
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            url:$.severHttp + "/v4/stream/updateCategory",
+            success:function(data) {
+                if (data.success) {
+                    $('#editStreamCategory').modal('hide');
+                    toastr.success("修改分类成功")
+                    var data = $("#overListTab").DataTable().row("#"+streamId).data();
+                    data.category = categoryName;
+                    $("#overListTab").DataTable().row("#"+streamId).data(data).draw(false);
+                } else {
+                     toastr.warn("修改分类失败")
+                }
+            },
+            error:function(e) {
+                console.log(e);
+                toastr.error("修改分类失败")
+            }
+         });
+    });
+
+    $("#allTab").on('click', 'span.handleCategory', function() {
+        var streamInfo = $(this).attr('id');
+        var streamArr = streamInfo.split('__');
+        var streamId = streamArr[0] || "";
+        var streamName = streamArr[1] || "";
+        $("#streamName").val(streamName);
+        $("#streamId-input").val(streamId);
+        $.ajax({
+            type: "GET",
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            url:$.severHttp + "/v4/categories",
+            success: function(datas) {
+                var items = datas && datas.items;
+                if (items) {
+                    var optionCell = '';
+                    for (var i = 0; i < items.length; i++) {
+                        var item = items[i];
+                        optionCell += '<option value="'+ item.name +'">' + item.name + "</option>";
+                    }
+                    $("#category-select").html(optionCell);
+                } else {
+                     $('#editStreamCategory').modal('hide');
+                    // 请先添加分类
+                     toastr.warn("请先添加分类")
+                }
+            }
+        });
+    });
+
+    $("#indexList").on('click', 'span.choiceness', function() {
+        var streamInfo = $(this).attr('id');
+        var streamArr = streamInfo.split('_');
+        var streamId = streamArr[1] || "";
+        var _this=this;
+        $.ajax({
+            type: "PUT",
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            data:{
+                streamId:streamId
+            },
+            url:$.severHttp + "/v4/stream/choiceness",
+            success: function(datas) {
+                 if (datas.success) {
+                    toastr.success("操作成功");
+                    $("#selectedListTab").DataTable().draw();
+                 }else{
+                    toastr.warn("操作失败");
+                 }
+                 if($(_this).text()=='添加到精选'){
+                    $(_this).text('取消精选');
+                    $("#"+streamInfo).removeClass("label-success").addClass("label-default");
+                 }else if($(_this).text()=='取消精选'){
+                    $(_this).text('添加到精选');
+                    $("#"+streamInfo).removeClass("label-default").addClass("label-success");
+                 }
+
+            }
+        });
+    });
+
+    $("#selectedList").on('click', 'span.choiceness', function() {
+        var streamInfo = $(this).attr('id');
+        var streamArr = streamInfo.split('_');
+        var streamId = streamArr[1] || "";
+        var _this=this;
+        $.ajax({
+            type: "PUT",
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            data:{
+                streamId:streamId
+            },
+            url:$.severHttp + "/v4/stream/choiceness",
+            success: function(datas) {
+                 if (datas.success) {
+                    toastr.success("操作成功");
+                    $("#selectedListTab").DataTable().draw();
+                 }else{
+                    toastr.warn("操作失败");
+                 }
+            }
+        });
+    });
+    
+    $("#indexList").on('click', 'span.active', function() {
+        var streamInfo = $(this).attr('id');
+        var streamArr = streamInfo.split('_');
+        var streamId = streamArr[1] || "";
+        var _this=this;
+        $.ajax({
+            type: "PUT",
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            data:{
+                streamId:streamId
+            },
+            url:$.severHttp + "/v4/stream/activities",
+            success: function(datas) {
+                 if (datas.success) {
+                    toastr.success("操作成功");
+                    $("#activityListTab").DataTable().draw();
+                 }else{
+                    toastr.warn("操作失败");
+                 }
+                 if($(_this).text()=='添加到活动'){
+                    $(_this).text('取消活动');
+                    $("#"+streamInfo).removeClass("label-success").addClass("label-default");
+                 }else if($(_this).text()=='取消活动'){
+                    $(_this).text('添加到活动');
+                    $("#"+streamInfo).removeClass("label-default").addClass("label-success");
+                 }
+            }
+        });
+    });
+
+    $("#activityList").on('click', 'span.active', function() {//添加与取消活动操作
+        var streamInfo = $(this).attr('id');
+        var streamArr = streamInfo.split('_');
+        var streamId = streamArr[1] || "";
+        var _this=this;
+        $.ajax({
+            type: "PUT",
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            data:{
+                streamId:streamId
+            },
+            url:$.severHttp + "/v4/stream/activities",
+            success: function(datas) {
+                 if (datas.success) {
+                    toastr.success("操作成功");
+                    $("#activityListTab").DataTable().draw();
+                 }else{
+                    toastr.warn("操作失败");
+                 }
+            }
+        });
+    });
+
+    $("#indexList").on('click', 'span.guess', function() {
+        var streamInfo = $(this).attr('id');
+        var streamArr = streamInfo.split('_');
+        var streamId = streamArr[1] || "";
+        var _this=this;
+        $.ajax({
+            type: "PUT",
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            data:{
+                streamId:streamId
+            },
+            url:$.severHttp + "/v4/stream/guessStream",
+            success: function(datas) {
+                 if (datas.success) {
+                    toastr.success("操作成功");
+                    $("#guessListTab").DataTable().draw();
+                 }else{
+                    toastr.warn("操作失败");
+                 }
+                 if($(_this).text()=='添加到猜你喜欢'){
+                    $(_this).text('取消猜你喜欢');
+                    $("#"+streamInfo).removeClass("label-success").addClass("label-default");
+                 }else if($(_this).text()=='取消猜你喜欢'){
+                    $(_this).text('添加到猜你喜欢');
+                    $("#"+streamInfo).removeClass("label-default").addClass("label-success");
+                 }
+            }
+        });
+    });
+
+    $("#guessList").on('click', 'span.guess', function() {
+        var streamInfo = $(this).attr('id');
+        var streamArr = streamInfo.split('_');
+        var streamId = streamArr[1] || "";
+        var _this=this;
+        $.ajax({
+            type: "PUT",
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            data:{
+                streamId:streamId
+            },
+            url:$.severHttp + "/v4/stream/guessStream",
+            success: function(datas) {
+                 if (datas.success) {
+                    toastr.success("操作成功");
+                    $("#guessListTab").DataTable().draw();
+                 }else{
+                    toastr.warn("操作失败");
+                 }
+            }
+        });
+    });
+
+    $("#indexListTab").on('click', 'span.invitationCard', function() {//获取课程邀请卡信息
+        var streamInfo = $(this).attr('id');
+        var streamArr = streamInfo.split('_');
+        var streamId = streamArr[1] || "";
+        var _this=this;
+        var price = $(this).attr('price');
+        $("#invitationCardTab").DataTable().destroy();
+        $("#invitationCardTab").DataTable({
+            fnCreatedRow:function(nRow,aData,iDataIndex){
+                $(nRow).attr('id', aData.cardId);
+            },
+//            serverSide:true,
+            order: [[ 0, "desc" ]],
+            aLengthMenu: paging,
+//          processing : true,
+            oLanguage:totableZH,
+            columns:[
+                {data:'_id'},
+                {data:'createdAt',orderable:true,render:function(data,type,full,meta){
+                    return data=formatDate(data,'yyyy-MM-dd HH:mm')
+                }},
+                {data:'discount',render:function(data,type,full,meta){
+                    if(data||data==0){
+                        return data;
+                    }else{
+                        return '';
+                    }
+                }},
+                {data:'total',render:function(data,type,full,meta){
+                    if(data){
+                        return data;
+                    }else{
+                        return '';
+                    }
+                }},
+                {data:'used',render:function(data,type,full,meta){
+                    if(data||data==0){
+                        return data;
+                    }else{
+                        return '';
+                    }
+                }},
+                {data:'discount',render:function(data,type,full,meta){
+                    return ((100-data)*0.01*price).toFixed(2);
+                }},
+                {data:'description',render:function(data,type,full,meta){
+                    if(data){
+                        return data;
+                    }else{
+                        return '';
+                    }
+                }}
+            ],
+            ajax:{
+                url:$.severHttp+"/card/list?streamId="+streamId,
+                headers:{
+                    access_token:$.fn.getSession('token')
+                },
+                dataSrc:'cards'
+            }
+        })
+    });
+
+    $('#distributorPanel').on('click', 'span.distributorOrder', function() {//获取课程分销商名下订单列表
+        var _id = $(this).attr('id');
+        var id = _id.split('_')[1] || "";
+        var stream = $(this).attr('streamId').split('_')[1];
+        var _this=this;
+        $("#disOrderTab").DataTable().destroy();
+        $("#disOrderTab").DataTable({
+//            serverSide:true,
+            order: [[ 0, "desc" ]],
+            aLengthMenu: paging,
+//          processing : true,
+            oLanguage:totableZH,
+            columns:[
+                {data:'userid.displayName'},
+                {data:'userid.phone',render:function(data,type,full,meta){
+                    if(data){
+                        return data;
+                    }else{
+                        return '';
+                    }
+                }},
+                {data:'stream.charge'},
+                {data:'cardId.discount',render:function(data,type,full,meta){
+                    if(data){
+                        return data=data+'%';
+                    }else{
+                        return '';
+                    }
+                }},
+                {data:'trade.actPrice',render:function(data,type,full,meta){
+                    if(data){
+                        return data;
+                    }else{
+                        return '0';
+                    }
+                }},
+                {data:'trade.dstPercent',render:function(data,type,full,meta){
+                    if(data){
+                        return data;
+                    }else{
+                        return '';
+                    }
+                }},
+                {data:'income.dstMoney'},
+                {data:'trade.trade_type',render:function(data,type,full,meta){
+                    if(data=='JSAPI'){
+                        return '公众号';
+                    }else if(data=='NATIVE'){
+                        return '原生扫码';
+                    }else if(data=='APP'){
+                        return 'APP支付';
+                    }else if(data=='MWEB'){
+                        return 'QQ';
+                    }else{
+                        return '';
+                    }
+                }}
+            ],
+            ajax:{
+                url:$.severHttp+"/stream/subscriptions",
+                headers:{
+                    access_token:$.fn.getSession('token')
+                },
+                data:{
+                    streamId:stream,
+                    distributorId:id
+                },
+                dataSrc:'items'
+            }
+        })
+    });
+
+    $("#distributeList").on('click', 'span.distributor', function() {//获取课程分销商列表
+        var _id = $(this).attr('id');
+        var id = _id.split('_')[1];
+        $("#distributorTab").DataTable().destroy();
+        var distributor=$("#distributorTab").DataTable({
+//            serverSide:true,
+            order: [[ 0, "desc" ]],
+//            aLengthMenu: paging,
+//          processing : true,
+            oLanguage:totableZH,
+            columns:[
+                {data:'displayName'},
+                {data:'phone'},
+                {data:'createdAt',orderable:true,render:function(data,type,full,meta){
+                    return data=formatDate(data,'yyyy-MM-dd HH:mm')
+                }},
+                {data:'count'},
+                {data:'totalMoney'},
+                {data:'_id',render:function(data,type,full,meta){
+                    return data = "<span class='label label-success distributorOrder' data-toggle='modal' data-target='#disOrderPanel' id='distributorOrder_"+data+"' streamId='distributorOrder_"+id+"'>查看明细</span><span class='label label-success freeze' id='distributorOrder_"+data+"'>冻结</span>";
+                }}
+            ],
+            ajax:{
+                url:$.severHttp+"/v4/stream/"+id+"/distributions",
+                headers:{
+                    access_token:$.fn.getSession('token')
+                },
+                dataSrc:'items'
+            }
+        })
+    });
+
+    function getDistributeList(e){
+        $("#distributeListTab").DataTable({
+        serverSide:true,
+//            order: [[ 1, "desc" ]],
+            aLengthMenu: [[5,10,20,-1],[5,10,20,'all']],
+            oLanguage:totableZH,
+            "ajax":{
+                url:$.severHttp+"/stream/list?status=all&type=isDst",
+                headers:{
+                    access_token:$.fn.getSession('token')
+                }
+            },
+            columns:[
+                {data:'title',orderable:false,render:function(data,type,full,meta){
+                    if(full.isSeries){
+                        return '<span id="package_'+full.streamId+'" class="seriesTitle" data-toggle="modal" data-target="#childListPanel">'+data+'</span>';
+                    }else{
+                        return data;
+                    }
+                }},
+                {data:'userName'},
+                {data:'startTime',orderable:true,render:function(data,type,full,meta){
+                    return data=formatDate(data,'yyyy-MM-dd HH:mm')
+                }},
+                {data:'thumbnailUrl',orderable:false,render:function(data,type,full,meta){
+                    if(full.deleted){
+                        return data='<div class="tabImg"><div class="deleteVideo">视频已删除</div><img style="cursor: default" src="'+data+'"/></div>'
+                    }else{
+                        if(full.isSeries){
+                            return data='<div class="tabImg"><img id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo"  videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/><span class="seriesLabel">系列课</span></div>'
+                        }else{
+                            return data='<div class="tabImg"><img status="'+full.status+'" id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo"  videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/></div>'
+                        }
+                    }
+                },action:function(){
+//                    console.log("测试url",full)
+                }},
+                {data:'charge'},
+                {data:'privacy',orderable:false,render:function(data,type,full,meta){
+                    if(!data&&full.isPassword){
+                        return '密码课';
+                    }
+                    if(!data&&!full.password){
+                        return '公开课';
+                    }
+                    if(data){
+                        return '团队课';
+                    }
+                }},
+                {data:'status',orderable:false,render:function(data,type,full,meta){
+                    if(data=='pending'){
+                        return '进行中';
+                    }
+                    if(data=='ready'){
+                        return '预告';
+                    }
+                    if(data=='live'){
+                        return '直播';
+                    }
+                    if(data=='over'){
+                        return '回放'
+                    }
+                }},
+                {data:'category', orderable:false, render:function(data,type,full,meta){
+                    if (!data) {
+                        data = "其他";
+                    }
+                    return data;
+                }},
+                {data:'_id',render:function(data,type,full,meta){
+                    return data = "<span class='label label-success distributor' data-toggle='modal' data-target='#distributorPanel' id='distributor_"+data+"'>查看明细</span>";
+                }}
+            ]
+        });
+    }
+
+    function getLiveAnswerList(e){
+        $("#liveAnswerListTab").DataTable({
+//            serverSide:true,
+//            order: [[ 1, "desc" ]],
+            aLengthMenu: [[5,10,20,-1],[5,10,20,'all']],
+            oLanguage:totableZH,
+            "ajax":{
+                url:$.severHttp+"/api/streams?type=quizRace",
+                headers:{
+                    access_token:$.fn.getSession('token')
+                },
+                dataSrc:'items'
+            },
+            columns:[
+                {data:'title'},
+                {data:'startTime',orderable:true,render:function(data,type,full,meta){
+                    return data=formatDate(data,'yyyy-MM-dd HH:mm')
+                }},
+                {data:'thumbnailUrl',orderable:false,render:function(data,type,full,meta){
+                    if(full.deleted){
+                        return data='<div class="tabImg"><div class="deleteVideo">视频已删除</div><img style="cursor: default" src="'+data+'"/></div>'
+                    }else{
+                        if(full.isSeries){
+                            return data='<div class="tabImg"><img id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo"  videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/><span class="seriesLabel">系列课</span></div>'
+                        }else{
+                            return data='<div class="tabImg"><img status="'+full.status+'" id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo"  videoUrls="'+full.streamUrl+'" src="'+data+'"/></div>'
+                        }
+                    }
+                },action:function(){
+//                    console.log("测试url",full)
+                }},
+                {data:'status',orderable:false,render:function(data,type,full,meta){
+                    if(data=='pending'){
+                        return '进行中';
+                    }
+                    if(data=='ready'){
+                        return '预告';
+                    }
+                    if(data=='live'){
+                        return '直播';
+                    }
+                    if(data=='over'){
+                        return '回放'
+                    }
+                }},
+                {data:'_id',render:function(data,type,full,meta){
+                    if(full.quizRace.isCurrentRace){
+                        return data = "<span class='label label-success setLive' _id='"+data+"'>当前直播答题</span>";
+                    }else{
+                        return data = "<span class='label label-success setLive' _id='"+data+"'>设置直播答题</span>";
+                    }
+                }}
+            ]
+        });
+    }
+
+
+    function getChildList(e){
+        var id=$(e.target).attr('id').split('_');
+        var streamId=id[1];
+        $("#childListTab").DataTable().destroy();
+        $("#childListTab").DataTable({
+//        serverSide:true,
+            order: [[ 1, "desc" ]],
+            aLengthMenu: [[5,10,20,-1],[5,10,20,'all']],
+            oLanguage:totableZH,
+            "ajax":{
+                url:$.severHttp+"/stream/getChildStream?streamId="+streamId,
+                headers:{
+                    access_token:$.fn.getSession('token')
+                },
+                dataSrc:'items'
+            },
+            columns:[
+                {data:'title'},
+                {data:'startTime'},
+                {data:'streamUrl',render:function(data,type,full,meta){
+                    return '<button status="'+full.status+'" class="playVideo" data-toggle="modal" data-target="#playThisVideo" videourls="'+data+'">播放</button>'
+                }},
+                {data:'status',render:function(data,type,full,meta){
+                    if(data=='ready'){
+                        return '预告';
+                    }else if(data=='live'){
+                        return '直播';
+                    }else if(data=='over'){
+                        return '回放';
+                    }else{
+                        return '';
+                    }
+                }}
+            ]
+        });
+    }
+
+    function getIndexList(){
+        $("#indexListTab").DataTable({
+            fnCreatedRow: function(nRow, aData, iDataIndex) {
+                $(nRow).attr('id', aData.streamId);
+            },
+            //默认以某列来排序
+            serverSide:true,
+            order: [[ 2, "desc" ]],
+            aLengthMenu: paging,
+//            processing : true,
+            oLanguage:totableZH,
+            columns:[
+                {data:'title',orderable:false,render:function(data,type,full,meta){
+                    if(full.isSeries){
+                        return '<span id="package_'+full.streamId+'" class="seriesTitle" data-toggle="modal" data-target="#childListPanel">'+data+'</span>';
+                    }else{
+                        return data;
+                    }
+                }},
+                {data:'userName',orderable:false},
+                {data:'timeStarted',orderable:true,render:function(data,type,full,meta){
+                    return data=formatDate(data,'yyyy-MM-dd HH:mm')
+                }},
+                {data:'thumbnailUrl',orderable:false,render:function(data,type,full,meta){
+                    if(full.deleted){
+                        return data='<div class="tabImg"><div class="deleteVideo">视频已删除</div><img style="cursor: default" src="'+data+'"/></div>'
+                    }else{
+                        if(full.isSeries){
+                            return data='<div class="tabImg"><img id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo"  videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/><span class="seriesLabel">系列课</span></div>'
+                        }else{
+                            return data='<div class="tabImg"><img status="'+full.status+'" id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo"  videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/></div>'
+                        }
+//                        if(full.isPopular){
+//                            return data='<div class="tabImg"><img id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo" videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/><span class="hotPoint">HOT</span></div>'
+//                        }else{
+//                            return data='<div class="tabImg"><img id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo"  videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/></div>'
+//                        }
+                    }
+                },action:function(){
+//                    console.log("测试url",full)
+                }},
+                {data:'charge',orderable:false},
+                {data:'privacy',orderable:false,render:function(data,type,full,meta){
+                    if(!data&&full.isPassword){
+                        return '密码课';
+                    }
+                    if(!data&&!full.password){
+                        return '公开课';
+                    }
+                    if(data){
+                        return '团队课';
+                    }
+                }},
+                {data:'status',orderable:false,render:function(data,type,full,meta){
+                    if(data=='pending'){
+                        return '进行中';
+                    }
+                    if(data=='ready'){
+                        return '预告';
+                    }
+                    if(data=='live'){
+                        return '直播';
+                    }
+                    if(data=='over'){
+                        return '回放'
+                    }
+                }},
+                {data:'category', orderable:false, render:function(data,type,full,meta){
+                    if (!data) {
+                        data = "其他";
+                    }
+                    return data;
+                }},
+                // {render: function(data, type, full, meta) {
+                //     return "<button>"+ full.streamId +"</button>";
+                // }},
+                {data:'isPopular',render:function(data,type,full,meta){
+                    if(full.deleted){
+                        return data="<span class='label label-default disabled'>视频已删除</span>"
+                    }else{
+                        // if(data){
+                        //     data="<span class='label label-default handleHot' id=hot_"+full.streamId+">取消热门</span>"
+                        // }else{
+                        //     data="<span class='label label-success handleHot' id=hot_"+full.streamId+">添加到热门</span>"
+                        // }
+                        data='';
+                        // if (full.sort == 1) {
+                        //     data += "<span class='label label-default handleStick' id='stick_"+full.streamId+"'>取消置顶</span>";
+                        // } else {
+                        //     data += "<span class='label label-success handleStick' id='stick_"+full.streamId+"'>添加置顶</span>";
+                        // }
+
+                        var sid = full.streamId + "__" + (full.title);
+                        data += "<span class='label label-success handleCategory' data-toggle='modal' data-target='#editStreamCategory' id='" + sid + "'>修改分类</span>";
+
+
+                        if (full.isChoiceness) {
+                            data += "<span class='label label-default choiceness' id='chioce_"+full.streamId+"'>取消精选</span>";
+                        } else {
+                            data += "<span class='label label-success choiceness' id='chioce_"+full.streamId+"'>添加到精选</span>";
+                        }
+
+                        if (full.isActivities) {
+                            data += "<span class='label label-default active' id='active_"+full.streamId+"'>取消活动</span>";
+                        } else {
+                            data += "<span class='label label-success active' id='active_"+full.streamId+"'>添加到活动</span>";
+                        }
+
+//                        if(full.isGuess){
+//                             data += "<span class='label label-default guess' id='guess_"+full.streamId+"'>取消猜你喜欢</span>";
+//                        }else{
+//                             data += "<span class='label label-success guess' id='guess_"+full.streamId+"'>添加到猜你喜欢</span>";
+//                        }
+                        data += "<span class='label label-success reportList' data-toggle='modal' data-target='#reportListPanel' id='active_"+full.streamId+"'>报名列表</span>";
+                        return data += "<span price='"+full.charge+"' class='label label-success invitationCard' data-toggle='modal' data-target='#invitationCardPanel' id='card_"+full._id+"'>邀请卡</span>";
+                    }
+                }}
+            ],
+            ajax:{
+                url:$.severHttp+"/stream/list?status=all",
+                headers:{
+                    access_token:$.fn.getSession('token')
+                }
+            }
+        });
+    }
+    function getSelectedList(){
+        $("#selectedListTab").DataTable({
+            //默认以某列来排序
+            serverSide:true,
+            order: [[ 2, "desc" ]],
+            aLengthMenu: paging,
+//            processing : true,
+            oLanguage:totableZH,
+            columns:[
+                {data:'title'},
+                {data:'userName',orderable:false},
+                {data:'startTime',orderable:true},
+                {data:'thumbnailUrl',orderable:false,render:function(data,type,full,meta){
+                    if(full.deleted||full.canceled){
+                        return data='<div class="tabImg"><div class="deleteVideo">已删除</div><img style="cursor: default" src="'+data+'"/></div>'
+                    }else{
+                        if(full.isPopular){
+                            return data='<div class="tabImgready"><img id="img'+full.streamId+'" videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/><span class="hotPoint">HOT</span></div>'
+                        }else{
+                            return data='<div class="tabImgready"><img id="img'+full.streamId+'"  videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/></div>'
+                        }
+                    }
+                    }
+                },
+                {data:'charge',orderable:false},
+                {data:'privacy',orderable:false,render:function(data,type,full,meta){
+                    if(!data&&full.isPassword){
+                        return '密码课';
+                    }
+                    if(!data&&!full.password){
+                        return '公开课';
+                    }
+                    if(data){
+                        return '团队课';
+                    }
+                }},
+                {data:'status',orderable:false,render:function(data,type,full,meta){
+                    if(data=='pending'){
+                        return '进行中';
+                    }
+                    if(data=='ready'){
+                        return '预告';
+                    }
+                    if(data=='live'){
+                        return '直播';
+                    }
+                    if(data=='over'){
+                        return '回放'
+                    }
+                }},
+                {data:'category', orderable:false, render:function(data,type,full,meta){
+                    if (!data) {
+                        data = "其他";
+                    }
+                    return data;
+                }},
+                {data:'isPopular',render:function(data,type,full,meta){
+                    if(full.deleted||full.canceled){
+                        return data="<span class='label label-default disabled'>视频已删除</span>"
+                    }else{
+                        // if(data){
+                        //     data="<span class='label label-default handleHot' id='"+full.streamId+"'>取消热门</span>"
+                        // }else{
+                        //     data="<span class='label label-success handleHot' id='"+full.streamId+"'>添加到热门</span>"
+                        // }
+                        data='';
+                        if (full.sort == 12) {
+                             data += "<span class='label label-default handleStick' id='stick_"+full.streamId+"'>取消置顶</span>";
+                        } else {
+                             data += "<span class='label label-success handleStick' id='stick_"+full.streamId+"'>添加置顶</span>";
+                        }
+                        var sid = full.streamId + "__" + (full.title);
+                        data += "<span class='label label-success handleCategory' data-toggle='modal' data-target='#editStreamCategory' id='" + sid + "'>修改分类</span>";
+                        if (full.isChoiceness) {
+                            return data += "<span class='label label-default choiceness' id='chioce_"+full.streamId+"'>取消精选</span>";
+                        }
+                    }
+                }}
+            ],
+            ajax:{
+                url:$.severHttp+"/stream/list?status=all&type=isChoiceness",
+                headers:{
+                    access_token:$.fn.getSession('token')
+                }
+            }
+        });
+    }
+
+    function getSelectedStickList(){
+        $("#selectedStickListTab").DataTable({
+            //默认以某列来排序
+            serverSide:true,
+            order: [[ 2, "desc" ]],
+            aLengthMenu: paging,
+//            processing : true,
+            oLanguage:totableZH,
+            columns:[
+                {data:'title'},
+                {data:'userName',orderable:false},
+                {data:'startTime',orderable:true},
+                {data:'thumbnailUrl',orderable:false,render:function(data,type,full,meta){
+                    if(full.deleted||full.canceled){
+                        return data='<div class="tabImg"><div class="deleteVideo">已删除</div><img style="cursor: default" src="'+data+'"/></div>'
+                    }else{
+                        if(full.isPopular){
+                            return data='<div class="tabImgready"><img id="img'+full.streamId+'" videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/><span class="hotPoint">HOT</span></div>'
+                        }else{
+                            return data='<div class="tabImgready"><img id="img'+full.streamId+'"  videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/></div>'
+                        }
+                    }
+                }
+                },
+                {data:'charge',orderable:false},
+                {data:'privacy',orderable:false,render:function(data,type,full,meta){
+                    if(!data&&full.isPassword){
+                        return '密码课';
+                    }
+                    if(!data&&!full.password){
+                        return '公开课';
+                    }
+                    if(data){
+                        return '团队课';
+                    }
+                }},
+                {data:'status',orderable:false,render:function(data,type,full,meta){
+                    if(data=='pending'){
+                        return '进行中';
+                    }
+                    if(data=='ready'){
+                        return '预告';
+                    }
+                    if(data=='live'){
+                        return '直播';
+                    }
+                    if(data=='over'){
+                        return '回放'
+                    }
+                }},
+                {data:'category', orderable:false, render:function(data,type,full,meta){
+                    if (!data) {
+                        data = "其他";
+                    }
+                    return data;
+                }},
+                {data:'sort',render:function(data,type,full,meta){
+                    if(full.deleted||full.canceled){
+                        return data="<span class='label label-default disabled'>视频已删除</span>"
+                    }else{
+                        // if(data){
+                        //     data="<span class='label label-default handleHot' id='"+full.streamId+"'>取消热门</span>"
+                        // }else{
+                        //     data="<span class='label label-success handleHot' id='"+full.streamId+"'>添加到热门</span>"
+                        // }
+                        data='';
+                        if (full.sort == 12) {
+                            data += "<span class='label label-default handleStick' id='stick_"+full.streamId+"'>取消置顶</span>";
+                        } else {
+                            data += "<span class='label label-success handleStick' id='stick_"+full.streamId+"'>添加置顶</span>";
+                        }
+                        var sid = full.streamId + "__" + (full.title);
+                        data += "<span class='label label-success handleCategory' data-toggle='modal' data-target='#editStreamCategory' id='" + sid + "'>修改分类</span>";
+                        if (full.isChoiceness) {
+                            return data += "<span class='label label-default choiceness' id='chioce_"+full.streamId+"'>取消精选</span>";
+                        }
+                    }
+                }}
+            ],
+            ajax:{
+                url:$.severHttp+"/stream/list?status=all&type=isStickAndChoice",
+                headers:{
+                    access_token:$.fn.getSession('token')
+                }
+            }
+        });
+    }
+    function getActivityList(){
+        $("#activityListTab").DataTable({
+            fnCreatedRow: function(nRow, aData, iDataIndex) {
+                $(nRow).attr('id', aData.streamId);
+            },
+            //默认以某列来排序
+            serverSide:true,
+            order: [[ 2, "desc" ]],
+            aLengthMenu: paging,
+            oLanguage:totableZH,
+//            processing : true,
+            columns:[
+                {data:'title'},
+                {data:'userName',orderable:false},
+                {data:'timeStarted',orderable:true,render:function(data,type,full,meta){
+                    return data=formatDate(data,'yyyy-MM-dd HH:mm')
+                }},
+                {data:'thumbnailUrl',orderable:false,render:function(data,type,full,meta){
+                    if(full.isPopular){
+                        return data='<div class="tabImg"><img id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo" videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/><span class="hotPoint">HOT</span></div>'
+                    }else{
+                        return data='<div class="tabImg"><img id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo" videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/></div>'
+                    }
+
+                }},
+                {data:'charge',orderable:false},
+                {data:'privacy',orderable:false,render:function(data,type,full,meta){
+                    if(!data&&full.isPassword){
+                        return '密码课';
+                    }
+                    if(!data&&!full.password){
+                        return '公开课';
+                    }
+                    if(data){
+                        return '团队课';
+                    }
+                }},
+                {data:'status',orderable:false,render:function(data,type,full,meta){
+                    if(data=='pending'){
+                        return '进行中';
+                    }
+                    if(data=='ready'){
+                        return '预告';
+                    }
+                    if(data=='live'){
+                        return '直播';
+                    }
+                    if(data=='over'){
+                        return '回放'
+                    }
+                }},
+                {data:'category', orderable:false, render:function(data,type,full,meta){
+                    if (!data) {
+                        data = "其他";
+                    }
+                    return data;
+                }},
+                {data:'isPopular',render:function(data,type,full,meta){
+                    // if(data){
+                    //     data="<span class='label label-default handleHot' id='"+full.streamId+"'>取消热门</span>"
+                    // }else{
+                    //     data="<span class='label label-success handleHot' id='"+full.streamId+"'>添加到热门</span>"
+                    // }
+                    data='';
+                    var sid = full.streamId + "__" + (full.title);
+                    data += "<span class='label label-success handleCategory' data-toggle='modal' data-target='#editStreamCategory' id='" + sid + "'>修改分类</span>";
+                    if (full.sort == 1) {
+                        data += "<span class='label label-default handleStick' id='stick_"+full.streamId+"'>取消置顶</span>";
+                    } else {
+                        data += "<span class='label label-success handleStick' id='stick_"+full.streamId+"'>添加置顶</span>";
+                    }
+                    if (full.isActivities) {
+                        return data += "<span class='label label-default active' id='active_"+full.streamId+"'>取消活动</span>";
+                    }    
+
+                }}
+            ],
+            ajax:{
+                url:$.severHttp+"/stream/list?status=all&type=isActivities",
+                headers:{
+                    access_token:$.fn.getSession('token')
+                }
+            }
+        });
+    }
+
+    function getActivityStickList(){
+        $("#activityStickListTab").DataTable({
+            fnCreatedRow: function(nRow, aData, iDataIndex) {
+                $(nRow).attr('id', aData.streamId);
+            },
+            //默认以某列来排序
+            serverSide:true,
+            order: [[ 2, "desc" ]],
+            aLengthMenu: paging,
+            oLanguage:totableZH,
+//            processing : true,
+            columns:[
+                {data:'title'},
+                {data:'userName',orderable:false},
+                {data:'timeStarted',orderable:true,render:function(data,type,full,meta){
+                    return data=formatDate(data,'yyyy-MM-dd HH:mm')
+                }},
+                {data:'thumbnailUrl',orderable:false,render:function(data,type,full,meta){
+                    if(full.isPopular){
+                        return data='<div class="tabImg"><img id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo" videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/><span class="hotPoint">HOT</span></div>'
+                    }else{
+                        return data='<div class="tabImg"><img id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo" videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/></div>'
+                    }
+
+                }},
+                {data:'charge',orderable:false},
+                {data:'privacy',orderable:false,render:function(data,type,full,meta){
+                    if(!data&&full.isPassword){
+                        return '密码课';
+                    }
+                    if(!data&&!full.password){
+                        return '公开课';
+                    }
+                    if(data){
+                        return '团队课';
+                    }
+                }},
+                {data:'status',orderable:false,render:function(data,type,full,meta){
+                    if(data=='pending'){
+                        return '进行中';
+                    }
+                    if(data=='ready'){
+                        return '预告';
+                    }
+                    if(data=='live'){
+                        return '直播';
+                    }
+                    if(data=='over'){
+                        return '回放'
+                    }
+                }},
+                {data:'category', orderable:false, render:function(data,type,full,meta){
+                    if (!data) {
+                        data = "其他";
+                    }
+                    return data;
+                }},
+                {data:'sort',render:function(data,type,full,meta){
+                    // if(data){
+                    //     data="<span class='label label-default handleHot' id='"+full.streamId+"'>取消热门</span>"
+                    // }else{
+                    //     data="<span class='label label-success handleHot' id='"+full.streamId+"'>添加到热门</span>"
+                    // }
+                    data='';
+                    var sid = full.streamId + "__" + (full.title);
+                    data += "<span class='label label-success handleCategory' data-toggle='modal' data-target='#editStreamCategory' id='" + sid + "'>修改分类</span>";
+                    if (full.sort == 1) {
+                        data += "<span class='label label-default handleStick' id='stick_"+full.streamId+"'>取消置顶</span>";
+                    } else {
+                        data += "<span class='label label-success handleStick' id='stick_"+full.streamId+"'>添加置顶</span>";
+                    }
+                    if (full.isActivities) {
+                        return data += "<span class='label label-default active' id='active_"+full.streamId+"'>取消活动</span>";
+                    }
+
+                }}
+            ],
+            ajax:{
+                url:$.severHttp+"/stream/list?status=all&type=isStickAndActivities",
+                headers:{
+                    access_token:$.fn.getSession('token')
+                }
+            }
+        });
+    }
+
+
+    function getGuessList(){
+        $("#guessListTab").DataTable({
+            fnCreatedRow: function(nRow, aData, iDataIndex) {
+                $(nRow).attr('id', aData.streamId);
+            },
+            //默认以某列来排序
+            serverSide:true,
+            order: [[ 2, "desc" ]],
+            aLengthMenu: paging,
+            oLanguage:totableZH,
+//            processing : true,
+            columns:[
+                {data:'title'},
+                {data:'userName',orderable:false},
+                {data:'timeStarted',orderable:true,render:function(data,type,full,meta){
+                    return data=formatDate(data,'yyyy-MM-dd HH:mm')
+                }},
+                {data:'thumbnailUrl',orderable:false,render:function(data,type,full,meta){
+                    if(full.isPopular){
+                        return data='<div class="tabImg"><img id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo" videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/><span class="hotPoint">HOT</span></div>'
+                    }else{
+                        return data='<div class="tabImg"><img id="img'+full.streamId+'" data-toggle="modal" data-target="#playThisVideo" videoUrls="'+full.streamUrls[0].url+'" src="'+data+'"/></div>'
+                    }
+
+                }},
+                {data:'charge',orderable:false},
+                {data:'privacy',orderable:false,render:function(data,type,full,meta){
+                    if(!data&&full.isPassword){
+                        return '密码课';
+                    }
+                    if(!data&&!full.password){
+                        return '公开课';
+                    }
+                    if(data){
+                        return '团队课';
+                    }
+                }},
+                {data:'status',orderable:false,render:function(data,type,full,meta){
+                    if(data=='pending'){
+                        return '进行中';
+                    }
+                    if(data=='ready'){
+                        return '预告';
+                    }
+                    if(data=='live'){
+                        return '直播';
+                    }
+                    if(data=='over'){
+                        return '回放'
+                    }
+                }},
+                {data:'category', orderable:false, render:function(data,type,full,meta){
+                    if (!data) {
+                        data = "其他";
+                    }
+                    return data;
+                }},
+                {data:'isPopular',render:function(data,type,full,meta){
+                    // if(data){
+                    //     data="<span class='label label-default handleHot' id='"+full.streamId+"'>取消热门</span>"
+                    // }else{
+                    //     data="<span class='label label-success handleHot' id='"+full.streamId+"'>添加到热门</span>"
+                    // }
+                    data='';
+                    var sid = full.streamId + "__" + (full.title);
+                    data += "<span class='label label-success handleCategory' data-toggle='modal' data-target='#editStreamCategory' id='" + sid + "'>修改分类</span>";
+
+                    if (full.isGuess) {
+                        return data += "<span class='label label-default guess' id='active_"+full.streamId+"'>取消猜你喜欢</span>";
+                    }    
+
+                }}
+            ],
+            ajax:{
+                url:$.severHttp+"/stream/list?status=all&type=isGuess",
+                headers:{
+                    access_token:$.fn.getSession('token')
+                }
+            }
+        });
+    }
+
+    $("#allTab").on('click', 'span.reportList', function(e){
+        getReportList(e);
+    })
+    function getReportList(e){
+        var id=$(e.target).attr('id').substr(7);
+        $("#reportListTab").DataTable().destroy();
+        $("#reportListTab").DataTable({
+//            serverSide:true,
+//            order: [[ 2, "desc" ]],
+            aLengthMenu: [[5,10,20,-1],[5,10,20,'all']],
+            oLanguage:totableZH,
+            "ajax":{
+                url:$.severHttp+"/old/stream/subscriptions?streamId="+id,
+                headers:{
+                    access_token:$.fn.getSession('token')
+                }
+            },
+            columns:[
+                {data:'displayName',render:function(data,type,full,meta){
+                    if(data){
+                        return data;
+                    }else{
+                        return '';
+                    }
+                 }},
+                {data:'avatarUrl',render:function(data,type,full,meta){
+                    return data='<div class="tabImg"><img id="img'+full.id+'" src="'+data+'"/></div>';
+                }},
+                {data:'phone',render:function(data,type,full,meta) {
+                    if(data){
+                        return data;
+                    }else{
+                        return '';
+                    }
+                }}
+            ]
+        });
+    }
+    //执行置顶操作
+    function handleStick(streamId) {
+        $.ajax({
+            type: "PUT",
+            data: {
+                streamId: streamId
+            },
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            url: $.severHttp + "/v4/stream/stick",
+            success: function(data) {
+                toastr.success('置顶操作成功');
+                if($("#stick_"+streamId).text()=="取消置顶"){
+                    $("#stick_"+streamId).text("添加置顶")
+                    $("#stick_"+streamId).removeClass("label-default").addClass("label-success")
+                }else{
+                    $("#stick_"+streamId).text("取消置顶")
+                    $("#stick_"+streamId).removeClass("label-success").addClass("label-default")
+                }
+                $("#selectedListTab").DataTable().draw();
+                $("#selectedStickListTab").DataTable().draw();
+                $("#activityListTab").DataTable().draw();
+                $("#activityStickListTab").DataTable().draw();
+            },
+            error:function() {
+                toastr.error('置顶操作失败')
+            }
+        });
+    }
+
+    function removeRows(){//过滤已经精选活动以及猜你喜欢的数据
+       
+    }
+
+    function handleHot(choiceTeamId){
+        var streamArr = choiceTeamId.split('_');
+        var streamId = streamArr[1] || "";
+        $.ajax({
+            type: 'POST',
+            data: {
+               streamId:streamId
+            },
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            url: $.severHttp + "/stream/popular",
+            success: function (data) {
+                console.log("dta",data)
+                toastr.success('操作成功');
+                console.log(streamId)
+                if($("#img"+streamId).parent().find('span.hotPoint').length==1){
+                    $("#img"+streamId).parent().find('span.hotPoint').remove()
+                }else{
+                    var spanP='<span class="hotPoint">HOT</span>'
+                    $("#img"+streamId).parent().append(spanP)
+                }
+
+                // if($("#"+choiceTeamId).text()=="取消热门"){
+                //     $("#"+choiceTeamId).text("添加到热门")
+                //     $("#"+choiceTeamId).removeClass("label-default").addClass("label-success")
+                // }else{
+                //     $("#"+choiceTeamId).text("取消热门")
+                //     $("#"+choiceTeamId).removeClass("label-success").addClass("label-default")
+                // }
+            },
+            error: function (error) {
+                toastr.error('操作失败')
+            }
+        })
+
+    }
+
+    $(document).on('click','#exportList',function(){
+        $("#reportListTab").table2excel({
+            // exclude CSS class
+            exclude: ".sorting_1",
+            name: "Worksheet Name",
+            filename: "课程报名",//do not include extension
+            exclude_img: true,
+            exclude_links: true,
+            exclude_inputs: true
+        });
+    })
+
+    $(document).on('click','.setLive',function(){
+        var _id=$(this).attr('_id');
+        var $this=$(this);
+        $.ajax({
+            type: 'put',
+            data: {
+                streamId:_id
+            },
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            url: $.severHttp + "/api/stream",
+            success:function(){
+                toastr.success('操作成功')
+                $("#liveAnswerListTab").DataTable().destroy();
+                getLiveAnswerList();
+            },
+            error:function(){
+                toastr.error('操作失败')
+            }
+        })
+    })
+    var quizRaceStatus=getSysConfig('quizRaceStatus');
+    var quizRaceNeedSubscribe=getSysConfig('quizRaceNeedSubscribe');
+    $("input[name='quizRaceStatus']").bootstrapSwitch({state:quizRaceStatus});
+    $("input[name='quizRaceNeedSubscribe']").bootstrapSwitch({state:quizRaceNeedSubscribe});
+    function getSysConfig(key){
+        var result;
+        $.ajax({
+            type: 'get',
+            data: {
+                key:key
+            },
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            async:false,
+            url: $.severHttp + "/api/sysConfig",
+            success:function(data){
+                if(data.value=='true'){
+                    result=true;
+                }else{
+                    result=false;
+                }
+            },
+            error:function(){
+                toastr.error('获取系统设置失败')
+            }
+        })
+        return result;
+    }
+    $('input[name="quizRaceStatus"]').on('switchChange.bootstrapSwitch', function(event, state) {
+        setSysConfig('quizRaceStatus',Boolean(state))
+    });
+    $('input[name="quizRaceNeedSubscribe"]').on('switchChange.bootstrapSwitch', function(event, state) {
+        setSysConfig('quizRaceNeedSubscribe',Boolean(state))
+    });
+    function setSysConfig(key,value){
+        var result;
+        $.ajax({
+            type: 'post',
+            data: {
+                key:key,
+                value:value,
+                description:'愿天堂没有BUG'
+            },
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            async:false,
+            url: $.severHttp + "/api/sysConfig",
+            success:function(data){
+
+            },
+            error:function(){
+                toastr.error('设置失败')
+            }
+        })
+    }
+})
+</script>
+
+<!-- Imported styles on this page -->
+<link rel="stylesheet" href="../assets/css/fonts/meteocons/css/meteocons.css">
+
+<!-- Bottom Scripts -->
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/TweenMax.min.js"></script>
+<script src="../assets/js/resizeable.js"></script>
+<script src="../assets/js/joinable.js"></script>
+<script src="../assets/js/xenon-api.js"></script>
+<script src="../assets/js/xenon-toggles.js"></script>
+
+
+<!--绘制表格-->
+<script src="../assets/js/datatables/js/jquery.dataTables.min.js"></script>
+<script src="../assets/js/datatables/dataTables.bootstrap.js"></script>
+<script src="../assets/js/datatables/yadcf/jquery.dataTables.yadcf.js"></script>
+<script src="../assets/js/datatables/tabletools/dataTables.tableTools.min.js"></script>
+
+
+<!-- Imported styles on this page -->
+<script src="../assets/js/toastr/toastr.min.js"></script>
+
+<!-- JavaScripts initializations and stuff -->
+<script src="../assets/js/xenon-custom.js"></script>
+
+</body>
+</html>

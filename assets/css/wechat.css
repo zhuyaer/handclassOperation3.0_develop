@@ -1,0 +1,53 @@
+#box {
+    height: 500px;
+    width: 250px;
+    border: 2px solid #E9E9E9;
+    border-radius: 25px;
+    background: #111111;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 5px 5px 5px #111;
+    margin-left: 30px;
+}
+
+
+#content-box {
+    clear: both;
+    height: 410px;
+    width: 230px;
+    background: white;
+    margin: 0 auto;
+    margin-top: 45px;
+    border: 1px solid #000;
+    overflow: hidden;
+    padding: 5px;
+}
+
+#home-box {
+    width: 65px;
+    height: 25px;
+    border-radius: 20px;
+    border: 2px solid #F8F8F8;
+    margin: 0 auto;
+    margin-top: 7px;
+    background: #222;
+}
+
+#box:hover {
+    box-shadow: 8px 10px 15px #111;
+    /*transform: translate(450px, 0px);*/
+}
+
+
+#phone-box {
+    display: inline;
+}
+
+
+#content-box  p {
+    color: black;
+}
+
+
+#content-box a, #content-box p a {
+    text-decoration: underline;
+}

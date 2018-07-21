@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Xenon Boostrap Admin Panel" />
+    <meta name="author" content="" />
+
+    <title>手播课运营平台</title>
+    <link rel="Shortcut icon" href="../assets/images/icon-shouboke16.ico">
+    <!--<link rel="stylesheet" href="http://fonts.useso.com/css?family=Arimo:400,700,400italic">-->
+    <link rel="stylesheet" href="../assets/css/fonts/linecons/css/linecons.css">
+    <link rel="stylesheet" href="../assets/css/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/xenon-core.css">
+    <link rel="stylesheet" href="../assets/css/xenon-forms.css">
+    <link rel="stylesheet" href="../assets/css/xenon-components.css">
+    <link rel="stylesheet" href="../assets/css/xenon-skins.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <script src="../assets/js/jquery-1.11.1.min.js"></script>
+    <script src="../assets/js/jquery.extend.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/validSystem.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="../assets/js/menu.js"></script>
+</head>
+<body class="page-body">
+
+<div class="settings-pane">
+
+    <a href="#" data-toggle="settings-pane" data-animate="true">
+        &times;
+    </a>
+
+    <div class="settings-pane-inner">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="user-info">
+
+                    <div class="user-image">
+                        <a href="extra-profile.html">
+                            <img src="../assets/images/user-2.png" class="img-responsive img-circle" />
+                        </a>
+                    </div>
+
+                    <div class="user-details">
+
+                        <h3>
+                            <a href="extra-profile.html">John Smith</a>
+
+                            <!-- Available statuses: is-online, is-idle, is-busy and is-offline -->
+                            <span class="user-status is-online"></span>
+                        </h3>
+
+                        <p class="user-title">Web Developer</p>
+
+                        <div class="user-links">
+                            <a href="extra-profile.html" class="btn btn-primary">Edit Profile</a>
+                            <a href="extra-profile.html" class="btn btn-success">Upgrade</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-8 link-blocks-env">
+
+                <div class="links-block left-sep">
+                    <h4>
+                        <span>Notifications</span>
+                    </h4>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk1" />
+                            <label for="sp-chk1">Messages</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk2" />
+                            <label for="sp-chk2">Events</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk3" />
+                            <label for="sp-chk3">Updates</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk4" />
+                            <label for="sp-chk4">Server Uptime</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="links-block left-sep">
+                    <h4>
+                        <a href="#">
+                            <span>Help Desk</span>
+                        </a>
+                    </h4>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Support Center
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Submit a Ticket
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Domains Protocol
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Terms of Service
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+
+<!-- Add "fixed" class to make the sidebar fixed always to the browser viewport. -->
+<!-- Adding class "toggle-others" will keep only one menu item open at a time. -->
+<!-- Adding class "collapsed" collapse sidebar root elements and show only icons. -->
+<div class="sidebar-menu toggle-others fixed">
+
+    <div class="sidebar-menu-inner">
+
+        <header class="logo-env">
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="javascript:void(0)" class="logo-expanded">
+                    <img src="../assets/images/icon220x60.png" width="160" alt="" />
+                </a>
+
+                <a  href="javascript:void(0)" class="logo-collapsed">
+                    <img src="../assets/images/icon60.png" width="40" alt="" />
+                </a>
+            </div>
+
+            <!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+            <div class="mobile-menu-toggle visible-xs">
+                <!--<a href="#" data-toggle="user-info-menu">-->
+                <!--<i class="fa-bell-o"></i>-->
+                <!--<span class="badge badge-success">7</span>-->
+                <!--</a>-->
+
+                <a href="#" data-toggle="mobile-menu">
+                    <i class="fa-bars"></i>
+                </a>
+            </div>
+
+            <!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
+            <!--<div class="settings-icon">-->
+            <!--<a href="#" data-toggle="settings-pane" data-animate="true">-->
+            <!--<i class="linecons-cog"></i>-->
+            <!--</a>-->
+            <!--</div>-->
+        </header>
+
+        <ul id="main-menu" class="main-menu">
+            <!-- add class "multiple-expanded" to allow multiple submenus to open -->
+            <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+        </ul>
+    </div>
+
+</div>
+
+<div class="main-content">
+    <!-- User Info, Notifications and Menu Bar -->
+    <nav class="navbar user-info-navbar" role="navigation">
+        <!-- Right links for user info navbar -->
+        <ul class="user-info-menu right-links list-inline list-unstyled">
+            <li class="dropdown user-profile">
+                <a href="#" data-toggle="dropdown">
+                    <img src="../assets/images/user-4.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
+							<span>
+								<span id="username"></span>
+								<i class="fa-angle-down"></i>
+							</span>
+                </a>
+                <ul class="dropdown-menu user-profile-menu list-unstyled" style="width:126px">
+                    <li>
+                        <a href="../editpwd.html" id="editpwd">
+                            <i class="fa-eyedropper"></i>
+                            修改密码
+                        </a>
+                    </li>
+                    <li class="last">
+                        <a href="../login.html" id="logout">
+                            <i class="fa-lock"></i>
+                            退出登录
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <script>
+                $(function(){
+                    $("#username").html($.fn.getSession('username'));
+                    $("#logout").click(function(){//退出登录保留记住的用户,密码,token过期
+                        $.fn.setSession('token',null);
+                    })
+                })
+            </script>
+        </ul>
+
+    </nav>
+    <!--广告设置-->
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- Removing search and results count filter -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title" style="margin-bottom: 15px">Banner设置</h3>
+                    <div style="padding: 0;float: right" class="panel-body">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addAdv">添加</button>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered table-striped" id="advTable">
+                        <thead>
+                        <tr>
+                            <th class="no-sorting">标题</th>
+                            <th>Banner封面</th>
+                            <th>Banner链接</th>
+                            <th>关联streamId</th>
+                            <th>倒计时(秒)</th>
+                            <th>应用状态</th>
+                            <th>编辑</th>
+                            <th>删除</th>
+                        </tr>
+                        </thead>
+                        <tbody id="advTbody" class="middle-align">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="main-footer footer-type-1">
+
+        <div class="footer-inner">
+
+            <!-- Add your copyright text here -->
+            <div class="footer-text">
+                &copy; 2016
+                <strong>LYCAM+</strong>
+            </div>
+
+
+            <!-- Go to Top Link, just add rel="go-top" to any link to add this functionality -->
+            <div class="go-up">
+
+                <a href="#" rel="go-top">
+                    <i class="fa-angle-up"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+</div>
+</div>
+
+<div class="page-loading-overlay">
+    <div class="loader-2"></div>
+</div>
+
+<!--添加广告-->
+<div class="modal fade" id="addAdv">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">添加Banner</h4>
+            </div>
+            <div class="modal-body">
+                <form id="addAdvForm">
+                    <div class="form-group">
+                        <label for="title">标题</label>
+                        <input type="text" class="form-control" name="title" id="title" placeholder="">
+                    </div>
+                    <div class="form-group coverAdv">
+                        <label>Banner封面：(请上传适合尺寸的图片1242 X 2208)</label><br>
+                        <div class="imgBoxAdv" id="filePicker">
+                            <img src="http://shouboke.tv/newsBroadcast-H5/assets/img/icon_add.png"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="advLink">Banner链接</label>
+                        <input type="text" class="form-control" name="advLink" id="advLink" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="streamId">关联streamId</label>
+                        <input type="text" class="form-control" name="streamId" id="streamId" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="countDown">倒计时</label>
+                        <input type="text" name="countDown" id="countDown" class="form-control countDown"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="sort">排序</label>
+                        <input type="text" name="sort" id="sort" class="form-control sort"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="radio-inline">
+                            <input type="radio" checked name="series" value="singel"> 单课
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="series" value="series"> 系列课
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input class="applyTheAdv" id="applyTheAdv" type="checkbox">是否立即应用
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" id="suretoAdd" class="btn btn-primary">添加</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--编辑Banner-->
+<div class="modal fade" id="editAdv">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">编辑Banner页</h4>
+            </div>
+            <div class="modal-body">
+                <form id="editAdvForm">
+                    <div class="form-group">
+                        <label for="title_edit">标题</label>
+                        <input type="text" class="form-control" name="title_edit" id="title_edit" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="advLink_edit">Banner链接</label>
+                        <input type="text" class="form-control" name="advLink_edit" id="advLink_edit" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="streamId_edit">关联streamId</label>
+                        <input type="text" class="form-control" name="streamId_edit" id="streamId_edit" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="countDown_edit">倒计时</label>
+                        <input type="text"  class="form-control" name="countDown_edit" id="countDown_edit"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="sort_edit">排序</label>
+                        <input type="text" class="form-control" name="sort_edit" id="sort_edit"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="radio-inline">
+                            <input type="radio" id="singel" name="series2" value="singel"> 单课
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="series" name="series2" value="series"> 系列课
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input class="applyTheAdv_edit" id="applyTheAdv_edit" type="checkbox">是否立即应用
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" id="suretoEdit" class="btn btn-primary">编辑</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--确定删除Banner-->
+<div class="modal fade" id="deleteAd">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">
+                删除后不可恢复，你确定删除吗？
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" id="suretoDelete" class="btn btn-primary" data-dismiss="modal">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--广告封面详情-->
+<div class="modal fade" id="viewpicDetail" style="z-index: 3000">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Banner封面</h4>
+            </div>
+            <div class="modal-body">
+                <img id="imgOfAdv" style="width: 100%" src=""/>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<style>
+    @media (min-width: 768px){
+        .modal-dialog {
+            width: 600px;
+            margin: 20px auto;
+        }
+    }
+</style>
+<script type="text/javascript">
+$(function(){
+    buildMenu(8);//统一通过menu.js创建菜单
+    var _this={};
+    _this.listInfo={}
+    getadList()
+    //模态框加载完成后uploader，关闭时销毁uploader
+    $("#addAdv").on("shown.bs.modal",function(){uploadImg()})
+    $('#addAdv').on('hide.bs.modal', function () {
+        //_this.uploader.destroy();
+    });
+
+    //验证增加Banner的表单
+    $("#addAdvForm").validate({
+        rules:{
+            countDown:{
+                number:true
+            },
+            sort:{
+                number:true
+            }
+        },
+        messages:{
+            countDown:{
+                number:"请输入数字"
+            },
+            sort:{
+                number:"请输入数字"
+            }
+        }
+    });
+    //验证编辑banner的表单
+    $("#editAdvForm").validate({
+        rules:{
+            countDown_edit:{
+                number:true
+            },
+            sort_edit:{
+                number:true
+            }
+        },
+        messages:{
+            countDown_edit:{
+                number:"请输入数字"
+            },
+            sort_edit:{
+                number:"请输入数字"
+            }
+        }
+    });
+    //添加banner
+    $("#suretoAdd").on("click",function(){
+        _this.creadteAdvData={
+            title:$("#title").val(),
+            link:$("#advLink").val(),
+            sort:$("#sort").val() || 1,
+            show:$("#applyTheAdv").prop('checked')?"1":"0",
+            streamId: $("#streamId").val() || "",
+            countDown:$("#countDown").val() || 5
+        }
+        var seriesType=$('input[name="series"]:checked').val();
+        if(seriesType=='singel'){
+            _this.creadteAdvData.isSeries=0;
+        }else{
+            _this.creadteAdvData.isSeries=1;
+        }
+        if($(".imgBoxAdv").hasClass("hasImg")){
+            if($("#addAdvForm").valid()){
+                _this.uploader.options.formData= _this.creadteAdvData;
+                _this.uploader.upload();
+            }
+        }else{
+            alert('必须上传封面')
+        }
+    });
+    //添加后清空form
+    $('#addAdv').on('hidden.bs.modal',function(){
+        $("#addAdvForm").find('input').val('')
+        $("#applyTheAdv").prop("checked",false)
+        $(".imgBoxAdv img").attr('src','http://shouboke.tv/newsBroadcast-H5/assets/img/icon_add.png');
+        $(".imgBoxAdv.hasImg")&&$(".imgBoxAdv.hasImg").removeClass('hasImg')
+    });
+
+    //编辑banner
+    $("#advTable").on('click','.editBtn',function(){
+        var id=$(this).attr('id');
+        var theListData=_this.listInfo[id]
+        _this.editId=id
+        theListData.title?$("#title_edit").val(theListData.title):$("#title_edit").val("")
+        theListData.streamId?$("#streamId_edit").val(theListData.streamId) :  $("#streamId_edit").val("")
+        theListData.link?$("#advLink_edit").val(theListData.link):$("#advLink_edit").val("")
+        theListData.countDown?$("#countDown_edit").val(theListData.countDown):$("#countDown_edit").val("")
+        theListData.sort?$("#sort_edit").val(theListData.sort):$("#sort_edit").val("")
+        theListData.show?$("#applyTheAdv_edit").prop('checked',true):$("#applyTheAdv_edit").prop('checked',false)
+        theListData.isSeries?$("#series").prop('checked',true):$("#singel").prop('checked',true)
+    })
+
+    $("#suretoEdit").on('click',function(){
+        _this.editAdvData={
+            id:_this.editId,
+            title:$("#title_edit").val(),
+            link:$("#advLink_edit").val(),
+            streamId: $("#streamId_edit").val(),
+            sort:$("#sort_edit").val() || 1,
+            show:$("#applyTheAdv_edit").prop('checked')?"1":"0",
+            countDown:$("#countDown_edit").val() || 5
+        }
+        var seriesType=$('input[name="series2"]:checked').val();
+        if(seriesType=='singel'){
+            _this.editAdvData.isSeries=0;
+        }else{
+            _this.editAdvData.isSeries=1;
+        }
+        if($("#editAdvForm").valid()){
+            editAdv()
+        }
+    })
+
+    //删除banner
+    $("#advTable").on('click','.deletAd',function(){
+        _this.todeleteAd=$(this).attr("id")
+    });
+    // 确认删除
+    $("#suretoDelete").on('click',function(){
+        deleteAd(_this.todeleteAd)
+    });
+
+    //查看Banner详情
+    $("#advTable").on('click','.tabImg',function(){
+        var src=$(this).find('img').attr('src')
+        $("#imgOfAdv").attr("src",src)
+    })
+
+
+    function uploadImg(){
+        _this.uploader = WebUploader.create({
+            // 选完文件后，是否自动上传。
+            auto: false,
+            // swf文件路径
+            swf: 'http://shouboke.tv/newsBroadcast-H5/assets/swf/Uploader.swf',
+            fileVal:'pic',
+//            formData:_this.creadteAdvData,
+            pick:{
+                id:'#filePicker',
+                multiple: false //让用户不能选择比规定数多的图片
+            },
+            chunked:true,
+            server: $.severHttp+"/v4/banner",
+            method: 'POST',
+            fileNumLimit:1,
+            // 只允许选择图片文件。
+            accept: {
+                title: 'Images',
+                extensions: 'jpg,jpeg,png',
+                mimeTypes: 'image/jpg,image/jpeg,image/png'
+            }
+        });
+        _this.uploader.on('uploadBeforeSend', function(obj, data, headers) {
+            headers.access_token=$.fn.getSession('token')
+        });
+        // 当有文件添加进来的时候
+        _this.uploader.on( 'fileQueued', function( file ) {
+            _this.uploader.makeThumb( file, function( error, src ) {
+                if ( error ) {
+                    alert("不能预览")
+                    return;
+                }
+                $(".imgBoxAdv img").attr('src',src)
+                $(".imgBoxAdv").addClass('hasImg')
+            }, 100, 100 );
+        });
+        _this.uploader.on('beforeFileQueued',function(file){
+            _this.uploader.reset();//重新选择图片
+            $(".imgBoxAdv.hasImg")&&$(".imgBoxAdv.hasImg").removeClass('hasImg')
+        })
+        _this.uploader.on( 'uploadError', function( file ) {
+            alert('上传出错，请重试')
+        });
+        _this.uploader.on( 'uploadSuccess', function( file ) {
+            $('#addAdv').modal('hide');
+            toastr.success("添加成功")
+            _this.advTable&&_this.advTable.destroy();
+            getadList()
+        });
+    }
+
+    // 获取banner列表
+    function getadList(){
+        _this.advTable=$("#advTable").DataTable({
+            serverSide:true,
+            aLengthMenu: paging,
+            oLanguage:totableZHTitle,
+            columns:[
+                {data:'id',orderable:false,render:function(data,type,full,meta){
+                    return data=full.title?full.title:""
+                }},
+                {data:'picUrl',orderable:false,render:function(data,type,full,meta){
+                    return data='<div class="tabImg"><img data-toggle="modal" data-target="#viewpicDetail" src="'+data+'"/></div>'
+                }},
+                {data:'id',orderable:false,render:function(data,type,full,meta){
+                    return data=full.link?full.link:""
+                }},
+                {data:'streamId',orderable:false,render:function(data,type,full,meta){
+                    return  data=full.streamId?full.streamId:""
+                }},
+                {data:'countDown',orderable:false},
+                {data:'show',orderable:false,render:function(data,type,full,meta){
+                    if(data){
+                        return data='<span class="label label-success">已应用(排序'+full.sort+')</span>'
+                    }else{
+                        return data='<span class="label label-default">未应用</span>'
+                    }
+                }},
+                {data:'id',orderable:false,render:function(data,type,full,meta){
+                    _this.listInfo[data]=full
+                    return data='<button class="btn btn-md btn-blue editBtn fa-edit" id="'+data+'" data-toggle="modal" data-target="#editAdv">编辑</button>'
+                }},
+                {data:'id',orderable:false,render:function(data,type,full,meta){
+                    return data='<button class="btn btn-sm btn-primary deletAd" id="'+data+'" data-toggle="modal" data-target="#deleteAd">删除</button>'
+                }}
+            ],
+            //设置tr属性
+            fnCreatedRow: function( nRow, aData, iDataIndex ) {
+                $(nRow).attr('id',"row"+aData._id);
+            },
+            ajax: function(data, callback, settings) {
+
+                $.get($.severHttp+"/v4/banners", {
+                    headers:{
+                        access_token:$.fn.getSession('token')
+                    }
+                }, function(jsonData) {
+                    var items = jsonData.items || '';
+                    var len = items.length || 0;
+                    console.log(items);
+                    callback({
+                        "recordsTotal": len,
+                        "recordsFiltered": len,
+                        "data": items
+                    });
+                });
+            }
+        });
+    }
+
+     // 删除banner
+    function deleteAd(id){
+        $.ajax({
+            type: 'DELETE',
+            data: {id:id},
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            url: $.severHttp + "/v4/banner",
+            success: function (data) {
+                toastr.success("删除成功")
+                _this.advTable.row('#row'+id).remove().draw( false );
+            },
+            error: function (error) {
+                console.log("error", error)
+                toastr.error("删除失败")
+            }
+        })
+    }
+
+    // 修改banner
+    function editAdv(){
+        $.ajax({
+            type: 'PUT',
+            data:_this.editAdvData,
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            url: $.severHttp + "/v4/banner",
+            success: function (data) {
+                $('#editAdv').modal('hide');
+                toastr.success("编辑成功")
+                _this.advTable&&_this.advTable.destroy();
+                getadList()
+            },
+            error: function (error) {
+                console.log("error", error)
+                toastr.error("编辑失败")
+            }
+        })
+    }
+
+})
+</script>
+
+<!-- Imported styles on this page -->
+<link rel="stylesheet" href="../assets/css/fonts/meteocons/css/meteocons.css">
+
+<!-- Bottom Scripts -->
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/TweenMax.min.js"></script>
+<script src="../assets/js/resizeable.js"></script>
+<script src="../assets/js/joinable.js"></script>
+<script src="../assets/js/xenon-api.js"></script>
+<script src="../assets/js/xenon-toggles.js"></script>
+
+
+<!--绘制表格-->
+<script src="../assets/js/datatables/js/jquery.dataTables.min.js"></script>
+<script src="../assets/js/datatables/dataTables.bootstrap.js"></script>
+<script src="../assets/js/datatables/yadcf/jquery.dataTables.yadcf.js"></script>
+<script src="../assets/js/datatables/tabletools/dataTables.tableTools.min.js"></script>
+
+
+<script src="../assets/js/select2/select2.min.js"></script>
+<script src="../assets/js/multiselect/js/jquery.multi-select.js"></script>
+<script src="../assets/js/toastr/toastr.min.js"></script>
+<script src="../assets/js/xenon-widgets.js"></script>
+<script src="../assets/js/devexpress-web-14.1/js/globalize.min.js"></script>
+<script src="../assets/js/devexpress-web-14.1/js/dx.chartjs.js"></script>
+<script src="../assets/js/toastr/toastr.min.js"></script>
+<script src="../assets/js/jquery.validate.js"></script>
+
+<!-- JavaScripts initializations and stuff -->
+<script src="../assets/js/xenon-custom.js"></script>
+<script src="../assets/js/webuploader.min.js"></script>
+
+</body>
+</html>

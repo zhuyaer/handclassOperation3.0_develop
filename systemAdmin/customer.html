@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Xenon Boostrap Admin Panel" />
+    <meta name="author" content="" />
+
+    <title>手播课运营平台</title>
+    <link rel="Shortcut icon" href="../assets/images/icon-shouboke16.ico">
+    <!--<link rel="stylesheet" href="http://fonts.useso.com/css?family=Arimo:400,700,400italic">-->
+    <link rel="stylesheet" href="../assets/css/fonts/linecons/css/linecons.css">
+    <link rel="stylesheet" href="../assets/css/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/xenon-core.css">
+    <link rel="stylesheet" href="../assets/css/xenon-forms.css">
+    <link rel="stylesheet" href="../assets/css/xenon-components.css">
+    <link rel="stylesheet" href="../assets/css/xenon-skins.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <script src="../assets/js/jquery-1.11.1.min.js"></script>
+    <script src="../assets/js/jquery.extend.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/validSystem.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="page-body">
+
+<div class="settings-pane">
+
+    <a href="#" data-toggle="settings-pane" data-animate="true">
+        &times;
+    </a>
+
+    <div class="settings-pane-inner">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="user-info">
+
+                    <div class="user-image">
+                        <a href="extra-profile.html">
+                            <img src="../assets/images/user-2.png" class="img-responsive img-circle" />
+                        </a>
+                    </div>
+
+                    <div class="user-details">
+
+                        <h3>
+                            <a href="extra-profile.html">John Smith</a>
+
+                            <!-- Available statuses: is-online, is-idle, is-busy and is-offline -->
+                            <span class="user-status is-online"></span>
+                        </h3>
+
+                        <p class="user-title">Web Developer</p>
+
+                        <div class="user-links">
+                            <a href="extra-profile.html" class="btn btn-primary">Edit Profile</a>
+                            <a href="extra-profile.html" class="btn btn-success">Upgrade</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-8 link-blocks-env">
+
+                <div class="links-block left-sep">
+                    <h4>
+                        <span>Notifications</span>
+                    </h4>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk1" />
+                            <label for="sp-chk1">Messages</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk2" />
+                            <label for="sp-chk2">Events</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk3" />
+                            <label for="sp-chk3">Updates</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk4" />
+                            <label for="sp-chk4">Server Uptime</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="links-block left-sep">
+                    <h4>
+                        <a href="#">
+                            <span>Help Desk</span>
+                        </a>
+                    </h4>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Support Center
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Submit a Ticket
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Domains Protocol
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Terms of Service
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+
+<!-- Add "fixed" class to make the sidebar fixed always to the browser viewport. -->
+<!-- Adding class "toggle-others" will keep only one menu item open at a time. -->
+<!-- Adding class "collapsed" collapse sidebar root elements and show only icons. -->
+<div class="sidebar-menu toggle-others fixed">
+
+    <div class="sidebar-menu-inner">
+
+        <header class="logo-env">
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="javascript:void(0)" class="logo-expanded">
+                    <img src="../assets/images/icon220x60.png" width="160" alt="" />
+                </a>
+
+                <a  href="javascript:void(0)" class="logo-collapsed">
+                    <img src="../assets/images/icon60.png" width="40" alt="" />
+                </a>
+            </div>
+
+            <!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+            <div class="mobile-menu-toggle visible-xs">
+                <!--<a href="#" data-toggle="user-info-menu">-->
+                <!--<i class="fa-bell-o"></i>-->
+                <!--<span class="badge badge-success">7</span>-->
+                <!--</a>-->
+
+                <a href="#" data-toggle="mobile-menu">
+                    <i class="fa-bars"></i>
+                </a>
+            </div>
+
+            <!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
+            <!--<div class="settings-icon">-->
+            <!--<a href="#" data-toggle="settings-pane" data-animate="true">-->
+            <!--<i class="linecons-cog"></i>-->
+            <!--</a>-->
+            <!--</div>-->
+        </header>
+
+        <ul id="main-menu" class="main-menu">
+            <!-- add class "multiple-expanded" to allow multiple submenus to open -->
+            <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+        </ul>
+    </div>
+
+</div>
+
+<div class="main-content">
+
+<!-- User Info, Notifications and Menu Bar -->
+<nav class="navbar user-info-navbar" role="navigation">
+    <!-- Right links for user info navbar -->
+    <ul class="user-info-menu right-links list-inline list-unstyled">
+        <li class="dropdown user-profile">
+            <a href="#" data-toggle="dropdown">
+                <img src="../assets/images/user-4.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
+							<span>
+								<span id="username"></span>
+								<i class="fa-angle-down"></i>
+							</span>
+            </a>
+            <ul class="dropdown-menu user-profile-menu list-unstyled" style="width:126px">
+                <li>
+                    <a href="../editpwd.html" id="editpwd">
+                        <i class="fa-eyedropper"></i>
+                        修改密码
+                    </a>
+                </li>
+                <li class="last">
+                    <a href="../login.html" id="logout">
+                        <i class="fa-lock"></i>
+                        退出登录
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <script>
+            $(function(){
+                $("#username").html($.fn.getSession('username'));
+                $("#logout").click(function(){//退出登录保留记住的用户,密码,token过期
+                    $.fn.setSession('token',null);
+                })
+            })
+        </script>
+    </ul>
+
+</nav>
+<!--分配客户给指定销售人员-->
+<div class="row" id="sellerYe">
+    <div class="col-sm-6" style="float:right">
+        <div style="padding: 0" class="panel-body">
+            <div class="form-group">
+                <div class="col-sm-3" style="text-align: right;padding-top:8px;padding-bottom: 8px">销售人员：</div>
+                <div class="col-sm-7">
+                    <select class="form-control" optionId="" id="selectsale">
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <button type="button" id="assignBtn" style="padding-top:8px;padding-bottom: 8px" class="btn btn-primary">分配</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="notsellerYe" style="height:46px"></div>
+<div class="row allSeller">
+    <div class="col-sm-2 active" id="seller" style="margin-left: 15px;">经销商管理</div>
+    <div class="col-sm-2" id="notseller">发票管理</div>
+</div>
+<div class="row" id="sellerBox">
+    <div class="col-sm-12">
+        <!-- Removing search and results count filter -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="sellerCheck" style="margin-left: 15px">
+                        <div id="notfenpei"  class="customer active">待分配</div>
+                        <div id="fenpei" class="customer">已分配</div>
+                    </div>
+                </div>
+            </div>
+            <!--待分配-->
+            <div id="notfenpeiDiv" class="panel-body">
+                <table class="table table-bordered table-striped" id="notfenpeiTab">
+                    <thead>
+                    <tr>
+                        <th class="no-sorting">
+                            <input type="checkbox" class="cbr">
+                        </th>
+                        <th>公司名称</th>
+                        <th>行业类型</th>
+                        <th>联系人</th>
+                        <th class="no-sorting">订单详情</th>
+                        <th class="no-sorting">卡券信息</th>
+                        <th class="no-sorting">手机号</th>
+                        <th>注册时间</th>
+                        <th>邮箱</th>
+                        <th>邮寄地址</th>
+                        <th>折扣(%)</th>
+                    </tr>
+                    </thead>
+                    <tbody id="notfenpeiTbody" class="middle-align">
+                    </tbody>
+                </table>
+            </div>
+            <!--已分配-->
+            <div id="fenpeiDiv" class="panel-body">
+                <table class="table table-bordered table-striped" id="fenpeiTab">
+                    <thead>
+                    <tr>
+                        <th>公司名称</th>
+                        <th>行业类型</th>
+                        <th>联系人</th>
+                        <th class="no-sorting">卡券信息</th>
+                        <th class="no-sorting">订单详情</th>
+                        <th class="no-sorting">手机号</th>
+                        <th>注册时间</th>
+                        <th>邮箱</th>
+                        <th>邮寄地址</th>
+                        <th>折扣(%)</th>
+                    </tr>
+                    </thead>
+                    <tbody id="fenpeiTbody" class="middle-align">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="notsellerBox">
+        <div class="col-sm-12">
+            <!-- Removing search and results count filter -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="receiptCheck" style="margin-left: 15px">
+                            <div id="notreceipt"  class="active">待开发票</div>
+                            <div id="receipt">已开发票</div>
+                        </div>
+                    </div>
+                </div>
+                <!--待开发票-->
+                <div id="notreceiptDiv" class="panel-body">
+                    <button class="btn btn-primary" id="clickForPrint">打印发票信息</button>
+                    <table class="table table-bordered table-striped" id="notreceiptTab">
+                        <thead>
+                        <tr>
+                            <th>订单号</th>
+                            <th>发票类型</th>
+                            <th>发票抬头</th>
+                            <th>发票内容</th>
+                            <th>联系人</th>
+                            <th>邮寄地址</th>
+                            <th class="no-sorting">联系电话</th>
+                            <th>原价(元)</th>
+                            <th>折扣(%)</th>
+                            <th>折后价(元)</th>
+                            <th class="no-sorting">操作<button style="margin-left: 7px;margin-bottom: 0" class="btn btn-xs btn-blue sureAlltoSent">全部确认</button></th>
+                        </tr>
+                        </thead>
+                        <tbody id="notreceiptTbody" class="middle-align">
+                        </tbody>
+                    </table>
+                </div>
+                <!--已开发票-->
+                <div id="receiptDiv" class="panel-body">
+                    <table class="table table-bordered table-striped" id="receiptTab">
+                        <thead>
+                        <tr>
+                            <th>订单号</th>
+                            <th>发票类型</th>
+                            <th>发票抬头</th>
+                            <th>发票内容</th>
+                            <th>联系人</th>
+                            <th>邮寄地址</th>
+                            <th class="no-sorting">联系电话</th>
+                            <th>原价(元)</th>
+                            <th>折扣(%)</th>
+                            <th>折后价(元)</th>
+                        </tr>
+                        </thead>
+                        <tbody id="receiptTbody" class="middle-align">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Main Footer -->
+<footer class="main-footer footer-type-1">
+
+    <div class="footer-inner">
+
+        <!-- Add your copyright text here -->
+        <div class="footer-text">
+            &copy; 2016
+            <strong>LYCAM+</strong>
+        </div>
+
+
+        <!-- Go to Top Link, just add rel="go-top" to any link to add this functionality -->
+        <div class="go-up">
+
+            <a href="#" rel="go-top">
+                <i class="fa-angle-up"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+</div>
+</div>
+
+<div class="page-loading-overlay">
+    <div class="loader-2"></div>
+</div>
+<!--设置折扣-->
+<div class="modal fade" id="setDiscount">
+    <div class="modal-dialog" style="width:600px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">修改折扣(%)</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" style="text-align: center;margin-bottom: 20px">
+                    <span class="sellerName"></span>
+                </div>
+                <div class="row">
+                    <div style="margin:0 auto;margin-bottom: 20px" class="input-group input-group-sm spinner col-sm-6" data-step="5" data-min="0" data-max="100">
+                        <span class="input-group-btn">
+                            <button class="btn btn-turquoise btn-single" data-type="decrement">-</button>
+                        </span>
+                        <input type="text" class="form-control text-center no-left-border" value="0"/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-turquoise btn-single" data-type="increment">+</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="button" id="setSaveBtn" data-dismiss="modal" class="btn btn-turquoise">保存设置</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--查看卡券-->
+<div class="modal fade" id="forCard">
+    <div class="modal-dialog" style="width:800px;">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">卡券信息</h4>
+            </div>
+            <div class="modal-body">
+                <table id="cardTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>卡券号</th>
+                        <th>面额(元)</th>
+                        <th>发放日期</th>
+                        <th>使用情况</th>
+                    </tr>
+                    </thead>
+                    <tbody id="cardTbody">
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--订单详情-->
+<div class="modal fade" id="forOrder">
+    <div class="modal-dialog"  style="width:950px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">订单信息</h4>
+            </div>
+            <div class="modal-body">
+                <table id="orderTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>订单号</th>
+                        <th>充值金额(元)</th>
+                        <th>充值方式</th>
+                        <th>充值状态</th>
+                        <th>充值确认</th>
+                        <th>充值时间</th>
+                    </tr>
+                    </thead>
+                    <tbody id="orderTbody">
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="../assets/js/menu.js"></script>
+<script type="text/javascript">
+$(function(){
+    buildMenu(5);//统一通过menu.js创建菜单
+    var _this={};
+    /************选择销售人员*****************/
+    $("#selectsale").select2({
+        placeholder: '选择销售人员名称...',
+        allowClear: true
+    }).on('select2-open', function()
+    {
+        // Adding Custom Scrollbar
+        $(this).data('select2').results.addClass('overflow-hidden').perfectScrollbar();
+    })
+
+    //打印表格
+    $("#clickForPrint").click(function(){
+        _this.$tableSprint.jqprint()
+    })
+    /*****************分配用户表*****************/
+
+    //默认优先未分配客户
+    $("#sellerBox").show();
+    $("#notsellerBox").hide();
+    $("#sellerYe").show();
+    $("#notsellerYe").hide();
+    $("#notfenpeiDiv").show();
+    $("#fenpeiDiv").hide();
+    $("#notreceiptDiv").show();
+    $("#receiptDiv").hide();
+    //选择查看未分配或已分配客户
+    $(".allSeller").on("click","div",function(){
+        $(".allSeller div.active")&&$(".allSeller div.active").removeClass("active");
+        $(this).addClass("active");
+        var id=$(this).attr("id");
+        $("#sellerBox").hide();
+        $("#notsellerBox").hide();
+        $("#sellerYe").hide();
+        $("#notsellerYe").hide();
+        $("#"+id+"Box").show();
+        $("#"+id+"Ye").show();
+    });
+    $(".sellerCheck").on("click","div",function(){
+        $(".sellerCheck div.active")&&$(".sellerCheck div.active").removeClass("active");
+        $(this).addClass("active");
+        var id=$(this).attr("id");
+        $("#fenpeiDiv").hide();
+        $("#notfenpeiDiv").hide();
+        $("#"+id+"Div").show();
+    })
+    $(".receiptCheck").on("click","div",function(){
+        $(".receiptCheck div.active")&&$(".receiptCheck div.active").removeClass("active");
+        $(this).addClass("active");
+        var id=$(this).attr("id");
+        $("#receiptDiv").hide();
+        $("#notreceiptDiv").hide();
+        $("#"+id+"Div").show();
+    })
+
+    getCustomer();
+    getInvoice();
+    $("#notfenpeiTab").on("click",".setcount",function(){
+        _this.setCountId=$(this).parent().parent().attr("id");
+        _this.setCountVal=$(this).prev().text();
+        _this.setCountnum=$("#"+_this.setCountId).find("td:nth-child(7)").text();
+        _this.setCountName=$("#"+_this.setCountId).find("td:nth-child(4)").text();
+        var obj=null;
+        if(_this.setCountName=="无"){
+            obj='<span>'+ _this.setCountnum+'</span>'
+        }else{
+            obj='<span>'+_this.setCountName+'('+_this.setCountnum+')</span>'
+        }
+        $(".sellerName").html(obj)
+        $("#setDiscount input.form-control").val(_this.setCountVal)
+    });
+
+    //查看卡券信息
+    $("#notfenpeiTab").on("click",".forCard",function(){
+        var sellerId=$(this).parent().parent().attr('id');
+        getCards(sellerId)
+    })
+    $("#fenpeiTab").on("click",".forCard",function(){
+        var sellerId=$(this).parent().parent().attr('id');
+        getCards(sellerId)
+    })
+    //查看订单记录
+    $("#notfenpeiTab").on("click",".forOrder",function(){
+        var sellerId=$(this).parent().parent().attr('id');
+        gettrade(sellerId)
+    })
+    $("#fenpeiTab").on("click",".forOrder",function(){
+        var sellerId=$(this).parent().parent().attr('id');
+        gettrade(sellerId)
+    })
+    $("#forCard").on('hidden.bs.modal',function(){
+        _this.cardTable&&_this.cardTable.destroy();
+    })
+    $("#forOrder").on('hidden.bs.modal',function(){
+        _this.orderTable&&_this.orderTable.destroy();
+    })
+    $("#setSaveBtn").click(function(){
+        setCount()
+    });
+
+    //人工确认银行转账
+    $("#orderTable").on("click",".suretTransfer",function(){
+        var out_trade_no=$(this).parent().parent().attr("id");
+        var dealer=$(this).parent().parent().find("td:first-child").attr('id');
+        suretTransfer(dealer,out_trade_no)
+    })
+
+    //人工确认发票已成功发出
+    $("#notreceiptTbody").on("click",".suretoSent",function(){
+        var out_trade_no=$(this).parent().parent().attr("id");
+        suretoSent(out_trade_no)
+    })
+    $(".sureAlltoSent").on("click",function(){
+        suretoSent(_this.allOutTradeNo,true)
+    })
+
+    //获取销售人员名单
+    getsellerselect();
+
+    //分配给指定的销售人员
+    $("#assignBtn").on("click",function(){
+        toAssign()
+    });
+
+    function getCustomer(){
+        $.ajax({
+            type:'GET',
+            headers:{
+                access_token:$.fn.getSession('token')
+            },
+            url: $.severHttp+"/dealer/list",
+            success:function(data){
+                console.log("dealerData",data)
+                /*未分配经销商*/
+                var noSeller = data.noSeller;
+                var tab_noSeller="";
+                var idArr=[];
+                for(var i=0;i<noSeller.length;i++){
+                    tab_noSeller+='<tr id="'+noSeller[i].id+'" class="point'+noSeller[i].id+'">' +
+                    '<td><input type="checkbox" class="cbr"></td>'+
+                    '<td>'+(noSeller[i].company?noSeller[i].company:"无")+'</td>'+
+                    '<td>'+(noSeller[i].industry?noSeller[i].industry:"无")+'</td>'+
+                    '<td>'+(noSeller[i].contact?noSeller[i].contact:"无")+'</td>'+
+                    '<td><span class="label label-success forOrder" data-toggle="modal" data-target="#forOrder">查看订单</span></td>'+
+                    '<td><span class="label label-success forCard" data-toggle="modal" data-target="#forCard">查看卡券</span></td>'+
+                    '<td>'+noSeller[i].phone+'</td>'+
+                    '<td>'+formatDate(noSeller[i].updatedAt,'yyyy-MM-dd HH:mm')+'</td>'+
+                    '<td>'+(noSeller[i].mail?noSeller[i].mail:"无")+'</td>'+
+                    '<td>'+(noSeller[i].mailingAddress?noSeller[i].mailingAddress:"无")+'</td>' +
+                    '<td><span>'+noSeller[i].discount+'</span>' +
+                    '<span style="margin-left:10px;" class="label label-success setcount" data-toggle="modal" data-target="#setDiscount">修改</span>'+
+                    '</td></tr>'
+                    idArr.push(noSeller[i].id)
+                    if(i==noSeller.length-1){
+                        needtoSure(idArr)
+                    }
+                }
+                $("#notfenpeiTbody").html(tab_noSeller)
+                _this.notfenpeiTab=$("#notfenpeiTab").DataTable({
+                    //  dom: "t" + "<'row'<'col-xs-6'i><'col-xs-6'p>>",
+                    //默认以某列来排序
+                    order: [[ 7, "desc" ]],
+                    aLengthMenu: paging,
+                    bProcessing : true,
+                    aoColumns: [
+                        {bSortable: false},
+                        null,
+                        null,
+                        null,
+                        {bSortable: false},
+                        {bSortable: false},
+                        {bSortable: false},
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    oLanguage:totableZH
+                });
+                var $state = $("#notfenpeiTab thead input[type='checkbox']");
+                // Script to select all checkboxes
+                $state.on('change', function(ev)
+                {
+                    var $chcks = $("#notfenpeiTab tbody input[type='checkbox']");
+
+                    if($state.is(':checked'))
+                    {
+                        $chcks.prop('checked', true).trigger('change');
+                    }
+                    else
+                    {
+                        $chcks.prop('checked', false).trigger('change');
+                    }
+                });
+
+                /*已分配经销商*/
+                var hasSeller = data.hasSeller;
+                var hasidArr=[];
+                var tab_hasSeller="";
+                for(var i=0;i<hasSeller.length;i++){
+                    tab_hasSeller+='<tr id="'+hasSeller[i].id+'" class="point'+hasSeller[i].id+'">' +
+                    '<td>'+(hasSeller[i].company?hasSeller[i].company:"无")+'</td>'+
+                    '<td>'+(hasSeller[i].industry?hasSeller[i].industry:"无")+'</td>'+
+                    '<td>'+(hasSeller[i].contact?hasSeller[i].contact:"无")+'</td>'+
+                    '<td><span class="label label-success forCard" data-toggle="modal" data-target="#forCard">查看卡券</span></td>'+
+                    '<td><span class="label label-success forOrder" data-toggle="modal" data-target="#forOrder">查看订单</span></td>'+
+                    '<td>'+hasSeller[i].phone+'</td>'+
+                    '<td>'+formatDate(hasSeller[i].updatedAt,'yyyy-MM-dd HH:mm')+'</td>'+
+                    '<td>'+(hasSeller[i].email?hasSeller[i].email:"无")+'</td>'+
+                    '<td>'+(hasSeller[i].mailingAddress?hasSeller[i].mailingAddress:"无")+'</td>' +
+                    '<td>'+hasSeller[i].discount+'</td></tr>'
+                    hasidArr.push(hasSeller[i].id)
+                    if(i==hasSeller.length-1){
+                        needtoSure(hasidArr)
+                    }
+                }
+                $("#fenpeiTbody").html(tab_hasSeller)
+                _this.fenpeiTab=$("#fenpeiTab").DataTable({
+                    //  dom: "t" + "<'row'<'col-xs-6'i><'col-xs-6'p>>",
+                    //默认以某列来排序
+                    order: [[ 6, "desc" ]],
+                    aLengthMenu: paging,
+                    bProcessing : true,
+                    aoColumns: [
+                        null,
+                        null,
+                        null,
+                        {bSortable: false},
+                        {bSortable: false},
+                        {bSortable: false},
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    oLanguage:totableZH
+                });
+            }
+
+        })
+    }
+    function getCustomerIsFenpei(){
+        _this.fenpeiTab&&_this.fenpeiTab.destroy();
+        $.ajax({
+            type:'GET',
+            headers:{
+                access_token:$.fn.getSession('token')
+            },
+            url: $.severHttp+"/dealer/list",
+            success:function(data){
+                console.log("dealerData",data)
+                /*已分配经销商*/
+                var hasSeller = data.hasSeller;
+                var hasidArr=[];
+                var tab_hasSeller="";
+                for(var i=0;i<hasSeller.length;i++){
+                    tab_hasSeller+='<tr id="'+hasSeller[i].id+'">' +
+                    '<td>'+(hasSeller[i].company?hasSeller[i].company:"无")+'</td>'+
+                    '<td>'+(hasSeller[i].industry?hasSeller[i].industry:"无")+'</td>'+
+                    '<td>'+(hasSeller[i].contact?hasSeller[i].contact:"无")+'</td>'+
+                    '<td><span class="label label-success forCard" data-toggle="modal" data-target="#forCard">查看卡券</span></td>'+
+                    '<td><span class="label label-success forOrder" data-toggle="modal" data-target="#forOrder">查看订单</span></td>'+
+                    '<td>'+hasSeller[i].phone+'</td>'+
+                    '<td>'+formatDate(hasSeller[i].updatedAt,'yyyy-MM-dd HH:mm')+'</td>'+
+                    '<td>'+(hasSeller[i].email?hasSeller[i].email:"无")+'</td>'+
+                    '<td>'+(hasSeller[i].mailingAddress?hasSeller[i].mailingAddress:"无")+'</td>' +
+                    '<td>'+hasSeller[i].discount+'</td></tr>'
+                    hasidArr.push(hasSeller[i].id)
+                    if(i==hasSeller.length-1){
+                        needtoSure(hasidArr)
+                    }
+                }
+                $("#fenpeiTbody").html(tab_hasSeller)
+                _this.fenpeiTab=$("#fenpeiTab").DataTable({
+                    //  dom: "t" + "<'row'<'col-xs-6'i><'col-xs-6'p>>",
+                    //默认以某列来排序
+                    order: [[ 6, "desc" ]],
+                    aLengthMenu: paging,
+                    bProcessing : true,
+                    aoColumns: [
+                        null,
+                        null,
+                        null,
+                        {bSortable: false},
+                        {bSortable: false},
+                        {bSortable: false},
+                        null,
+                        null,
+                        null,
+                        null
+                    ],
+                    oLanguage:totableZH
+                });
+            }
+
+        })
+    }
+    function getsellerselect(){
+        $.ajax({
+            type: 'GET',
+            data: {},
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            url: $.severHttp + "/user/sellers",
+            success: function (data) {
+                var sellers="<option></option>";
+                for(var i=0;i<data.length;i++){
+                    sellers+="<option sellerId='"+data[i].id+"'>"+data[i].username+"</option>"
+
+                }
+                $("#selectsale").html(sellers)
+
+            },
+            error: function (error) {
+                console.log("error", error)
+            }
+        })
+    }
+    function toAssign(){
+        var $chcks = $("tbody input[type='checkbox']:checked");
+        _this.chcksUser="";
+        for(var i=0;i<$chcks.length;i++){
+            _this.chcksUser+=$($chcks[i]).parent().parent().attr("id")+","
+           $($chcks[i]).parent().parent().addClass("selectTr")
+        }
+        var saleId=$("#selectsale").find("option:selected").attr("sellerId");
+        console.log("saleId",saleId)
+        if(saleId){
+            if(!_this.chcksUser==""){
+                $.ajax({
+                    type: 'POST',
+                    data: {
+                        dealer: _this.chcksUser,
+                        seller:saleId//填写销售人员ID
+                    },
+                    headers: {
+                        access_token: $.fn.getSession('token')
+                    },
+                    url: $.severHttp + "/dealer/setSeller",
+                    success: function (data) {
+                        console.log("分配data",data)
+                        if(data.success){
+                            toastr.success("分配成功")
+                            var $chcks = $("thead input[type='checkbox']");
+                            $chcks.prop('checked', false).trigger('change');
+                            _this.notfenpeiTab.row('.selectTr').remove().draw( false );
+                            getCustomerIsFenpei();
+                        }else{
+                            toastr.error("分配失败")
+                        }
+                    },
+                    error: function (error) {
+                        if(error.readyState==4){
+                            toastr.warning("请选择经销商")
+                        }
+                        console.log("error", error)
+                    }
+                })
+            }else{
+                toastr.warning("请选择经销商")
+            }
+        }else{
+            toastr.warning("请指定销售人员")
+        }
+
+
+    }
+    function setCount(){
+        $.ajax({
+            type:'GET',
+            data:{
+                discount: $("#setDiscount input.form-control").val()||100,
+                dealer:_this.setCountId
+            },
+            headers:{
+                access_token:$.fn.getSession('token')
+            },
+            url:$.severHttp+"/dealer/setDiscount",
+            success:function(data){
+                if(data.success){
+                    toastr.success("修改成功！")
+                    $("#"+_this.setCountId).find("td:last-child span:eq(0)").text($("#setDiscount input.form-control").val()||100);
+                }else{
+                    toastr.error("修改失败！")
+                }
+            },
+            error:function(){
+                toastr.error("修改失败！")
+            }
+        })
+    }
+    function getCards(id){
+        console.log("id",id)
+        $.ajax({
+            type: 'GET',
+            data: {
+                page:1,
+                resultsPerPage:10000
+            },
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            url: $.severHttp + "/voucher/list?dealer="+id,
+            success: function (data) {
+                console.log("卡券信息",data)
+                var data=data.items;
+                var tab='';
+                for(var i=0;i<data.length;i++){
+                    tab+=
+                            '<tr>'+
+                            '<td>'+data[i].voucherId+'</td>'+
+                            '<td>'+data[i].value+'</td>'+
+                            '<td>'+formatDate(data[i].createdAt,'yyyy-MM-dd HH:mm')+'</td>'+
+                            '<td>'+(data[i].isUsed?'<span class="label label-red">已使用</span>':'<span class="label label-secondary">未使用</span>')+'</td>'+
+                            '</tr>'
+                }
+                $("#cardTbody").html(tab)
+                _this.cardTable=$("#cardTable").DataTable({
+                    //  dom: "t" + "<'row'<'col-xs-6'i><'col-xs-6'p>>",
+                    order: [[ 2, "desc" ]],
+                    aLengthMenu: paging,
+                    bProcessing : true,
+                    aoColumns: [
+                        {"sWidth": "30%"},
+                        {"sWidth": "20%"},
+                        {"sWidth": "30%"},
+                        {"sWidth": "20%"}
+                    ],
+                    oLanguage:totableZH
+                });
+
+            },
+            error: function (error) {
+
+            }
+        })
+    }
+    function gettrade(id){
+        $.ajax({
+            type: 'GET',
+            data: {
+                page:1,
+                resultsPerPage:10000
+            },
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            url: $.severHttp + "/trade/list?dealer="+id,
+            success: function (data) {
+                console.log("订单信息",data)
+                var data=data.items
+                var tab='';
+                for(var i=0;i<data.length;i++){
+                    tab+=
+                            '<tr id="'+data[i].out_trade_no+'">'+
+                            '<td id="'+data[i].dealer+'">'+data[i].out_trade_no+'</td>'+
+                            '<td>'+data[i].total_amount+'</td>'+
+                            '<td>'+trade_type(data[i].trade_type)+'</td>'+
+                            '<td>'+status(data[i].status)+'</td>'+
+                            '<td style="text-align: center">'+surePay(data[i].trade_type,data[i].status,data[i].extraInfo)+'</td>'+
+                            '<td>'+formatDate(data[i].createdAt,'yyyy-MM-dd HH:mm')+'</td>'+
+                            '</tr>'
+                }
+                $("#orderTbody").html(tab)
+                _this.orderTable=$("#orderTable").DataTable({
+                    //  dom: "t" + "<'row'<'col-xs-6'i><'col-xs-6'p>>",
+                    order: [[ 5, "desc" ]],
+                    aLengthMenu: paging,
+                    bProcessing : true,
+                    aoColumns: [
+                        {"sWidth": "20%"},
+                        {"sWidth": "15%"},
+                        {"sWidth": "15%"},
+                        {"sWidth": "15%"},
+                        {"sWidth": "15%"},
+                        {"sWidth": "20%"}
+                    ],
+                    oLanguage:totableZH
+                });
+            },
+            error: function (error) {
+
+            }
+        })
+    }
+    //标记所有需要人工确认的订单
+    function needtoSure(idArr){
+        for(var i=0;i<idArr.length;i++){
+            var _thisId=idArr[i];
+            (function(id){
+                $.ajax({
+                    type: 'GET',
+                    data: {
+                        page:1,
+                        resultsPerPage:10000
+                    },
+                    headers: {
+                        access_token: $.fn.getSession('token')
+                    },
+                    url: $.severHttp + "/trade/list?dealer="+id,
+                    success: function (data) {
+                        var dta=data.items;
+
+                        dta.forEach(function(t,n){
+                            if(t.trade_type=="bank-transfer"&&t.status=="prepare"){
+                                $(".point"+id).find("td:nth-child(5) span").css("background","red")
+                            }
+                        })
+                    },
+                    error: function (error) {
+
+                    }
+                })
+            })(_thisId)
+
+        }
+    }
+    function suretTransfer(dealer,out_trade_no){
+        $.ajax({
+            type: 'POST',
+            data: {
+                out_trade_no:out_trade_no,
+                dealer:dealer
+            },
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            url: $.severHttp + "/pay/bank/ensure",
+            success: function (data) {
+                console.log("确认转账",data)
+                if(data.success){
+                    var obj='<button class="btn btn-blue disabled">'+data.ensureUsername+'已确认</button>';
+                    $("#"+out_trade_no).find("td:nth-child(5)").html(obj)
+                    $("#"+out_trade_no).find("td:nth-child(4)").text("支付成功")
+                    toastr.success("确认转账成功！")
+                }else{
+                    toastr.error("确认失败！")
+                }
+            },
+            error: function (error) {
+                toastr.error("确认失败！")
+            }
+        })
+    }
+    function trade_type(trade){
+        if(trade=="bank-transfer"){
+            return "银行转账"
+        }else if(trade=="alipay"){
+            return "支付宝支付"
+        }else{
+            return "微信支付"
+        }
+    }
+    function status(status){
+        if(status=="prepare"){
+            return "未支付"
+        }else if(status=="success"){
+            return "支付成功"
+        }else{
+            return "支付失败"
+        }
+    }
+    function surePay(trade,status,extraInfo){
+        if(trade=="bank-transfer"&&status=="prepare"){
+            return '<button class="btn btn-blue suretTransfer">点击确认</button>'
+        }else if(trade=="bank-transfer"&&status=="success"){
+            return '<button class="btn btn-blue disabled">'+(extraInfo.ensureUsername?extraInfo.ensureUsername:"")+'已确认</button>'
+        }else{
+            return '——'
+        }
+    }
+    function getInvoice(){
+        $.ajax({
+            type:'GET',
+            headers:{
+                access_token:$.fn.getSession('token')
+            },
+            url: $.severHttp+"/trade/invoice",
+            success:function(data){
+                console.log("allinvoice",data)
+                var notSent=[],sent=[];
+                for(var i=0;i<data.items.length;i++){
+                    if(data.items[i].isSent){
+                        sent.push(data.items[i])
+                    }else{
+                        notSent.push(data.items[i])
+                    }
+                }
+                console.log("sent",sent);
+                console.log("notsent",notSent);
+                //已开发票
+                var tab_sent="";
+                for(var i=0;i<sent.length;i++){
+                    tab_sent+='<tr id="'+sent[i].out_trade_no+'">' +
+                    '<td>'+sent[i].out_trade_no+'</td>'+
+                    '<td>'+sent[i].type+'</td>'+
+                    '<td>'+sent[i].title+'</td>'+
+                    '<td>'+sent[i].content+'</td>'+
+                    '<td>'+sent[i].contact+'</td>'+
+                    '<td>'+sent[i].mailingAddress+'</td>'+
+                    '<td>'+sent[i].telephone+'</td>'+
+                    '<td>'+sent[i].price+'</td>'+
+                    '<td>'+sent[i].discount+'</td>'+
+                    '<td>'+sent[i].priceAfterDiscount+'</td>'+
+                    '</tr>'
+                }
+                $("#receiptTbody").html(tab_sent)
+                _this.receiptTable=$("#receiptTab").DataTable({
+                    //  dom: "t" + "<'row'<'col-xs-6'i><'col-xs-6'p>>",
+                    //默认以某列来排序
+                    aLengthMenu: paging,
+                    bProcessing : true,
+                    oLanguage:totableZH,
+                    aoColumns: [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        {bSortable: false},
+                        null,
+                        null,
+                        null
+                    ]
+                });
+
+                //未开发票
+                var tab_notsent="",tab_print="";
+                _this.allOutTradeNo=""
+                for(var i=0;i<notSent.length;i++){
+                    tab_notsent+='<tr class="thisMark" id="'+notSent[i].out_trade_no+'">' +
+                    '<td>'+notSent[i].out_trade_no+'</td>'+
+                    '<td>'+notSent[i].type+'</td>'+
+                    '<td>'+notSent[i].title+'</td>'+
+                    '<td>'+notSent[i].content+'</td>'+
+                    '<td>'+notSent[i].contact+'</td>'+
+                    '<td>'+notSent[i].mailingAddress+'</td>'+
+                    '<td>'+notSent[i].telephone+'</td>'+
+                    '<td>'+notSent[i].price+'</td>'+
+                    '<td>'+notSent[i].discount+'</td>'+
+                    '<td>'+notSent[i].priceAfterDiscount+'</td>'+
+                    '<td><button class="btn btn-blue btn-xs suretoSent">确认已开</button></td>'+
+                    '</tr>'
+                    tab_print+='<tr style="text-align: center">' +
+                    '<td>'+notSent[i].out_trade_no+'</td>'+
+                    '<td>'+notSent[i].type+'</td>'+
+                    '<td>'+notSent[i].title+'</td>'+
+                    '<td>'+notSent[i].content+'</td>'+
+                    '<td>'+notSent[i].contact+'</td>'+
+                    '<td>'+notSent[i].mailingAddress+'</td>'+
+                    '<td>'+notSent[i].telephone+'</td>'+
+                    '<td>'+notSent[i].price+'</td>'+
+                    '<td>'+notSent[i].discount+'</td>'+
+                    '<td>'+notSent[i].priceAfterDiscount+'</td>'+
+                    '</tr>'
+                    _this.allOutTradeNo+=notSent[i].out_trade_no+","
+                }
+                $("#notreceiptTbody").html(tab_notsent)
+                _this.notreceiptTable=$("#notreceiptTab").DataTable({
+                    //  dom: "t" + "<'row'<'col-xs-6'i><'col-xs-6'p>>",
+                    //默认以某列来排序
+                    aLengthMenu: paging,
+                    bProcessing : true,
+                    oLanguage:totableZH,
+                    aoColumns: [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        {bSortable: false},
+                        null,
+                        null,
+                        null,
+                        {bSortable: false}
+                    ]
+                });
+
+                //要打印的表格内容
+                _this.$tableSprint=$("<table id='sprintTable'></table>")
+                $head=$("<thead><tr><th>订单号</th><th>发票类型</th><th>发票抬头</th><th>发票内容</th><th>联系人</th><th>邮寄地址</th>" +
+                "<th>联系电话</th><th>原价(元)</th><th>折扣(%)</th><th>折后价(元)</th></tr></thead>");
+                $body=$("<tbody id='sprintBody'></tbody>");
+                $body.append(tab_print)
+                _this.$tableSprint.append($head).append($body)
+            }
+        })
+    }
+    function getInvoiceHasSent(){
+        _this.receiptTable&&_this.receiptTable.destroy();
+        $.ajax({
+            type:'GET',
+            headers:{
+                access_token:$.fn.getSession('token')
+            },
+            url: $.severHttp+"/trade/invoice",
+            success:function(data){
+                console.log("allinvoice",data)
+                var sent=[];
+                for(var i=0;i<data.items.length;i++){
+                    if(data.items[i].isSent){
+                        sent.push(data.items[i])
+                    }else{
+                    }
+                }
+                console.log("sent",sent);
+                //已开发票
+                var tab_sent="";
+                for(var i=0;i<sent.length;i++){
+                    tab_sent+='<tr id="'+sent[i].out_trade_no+'">' +
+                    '<td>'+sent[i].out_trade_no+'</td>'+
+                    '<td>'+sent[i].type+'</td>'+
+                    '<td>'+sent[i].title+'</td>'+
+                    '<td>'+sent[i].content+'</td>'+
+                    '<td>'+sent[i].contact+'</td>'+
+                    '<td>'+sent[i].mailingAddress+'</td>'+
+                    '<td>'+sent[i].telephone+'</td>'+
+                    '<td>'+sent[i].price+'</td>'+
+                    '<td>'+sent[i].discount+'</td>'+
+                    '<td>'+sent[i].priceAfterDiscount+'</td>'+
+                    '</tr>'
+                }
+                $("#receiptTbody").html(tab_sent)
+                _this.receiptTable=$("#receiptTab").DataTable({
+                    //  dom: "t" + "<'row'<'col-xs-6'i><'col-xs-6'p>>",
+                    //默认以某列来排序
+                    aLengthMenu: paging,
+                    bProcessing : true,
+                    oLanguage:totableZH,
+                    aoColumns: [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        {bSortable: false},
+                        null,
+                        null,
+                        null
+                    ]
+                });
+            }
+        })
+    }
+    function suretoSent(out_trade_no,isAll){
+        console.log(out_trade_no)
+        $.ajax({
+            type:'POST',
+            headers:{
+                access_token:$.fn.getSession('token')
+            },
+            data:{
+                out_trade_no:out_trade_no
+            },
+            url: $.severHttp+"/trade/sendInvoice",
+            success:function(data){
+                console.log("sendBackdata",data)
+                if(isAll){
+                    _this.notreceiptTable.row(".thisMark").remove().draw(false);
+                }else{
+                    _this.notreceiptTable.row('#'+out_trade_no).remove().draw( false );
+                }
+                getInvoiceHasSent()
+                toastr.success("操作成功！")
+            },
+            error:function(error){
+                toastr.error("操作失败")
+            }
+        })
+    }
+
+})
+</script>
+
+<!-- Imported styles on this page -->
+<link rel="stylesheet" href="../assets/css/fonts/meteocons/css/meteocons.css">
+
+<!-- Bottom Scripts -->
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/TweenMax.min.js"></script>
+<script src="../assets/js/resizeable.js"></script>
+<script src="../assets/js/joinable.js"></script>
+<script src="../assets/js/xenon-api.js"></script>
+<script src="../assets/js/xenon-toggles.js"></script>
+
+
+<!--绘制表格-->
+<script src="../assets/js/datatables/js/jquery.dataTables.min.js"></script>
+<script src="../assets/js/datatables/dataTables.bootstrap.js"></script>
+<script src="../assets/js/datatables/yadcf/jquery.dataTables.yadcf.js"></script>
+<script src="../assets/js/datatables/tabletools/dataTables.tableTools.min.js"></script>
+
+
+<!-- Imported styles on this page -->
+<!--<link rel="stylesheet" href="../assets/js/daterangepicker/daterangepicker-bs3.css">-->
+<link rel="stylesheet" href="../assets/js/select2/select2.css">
+<link rel="stylesheet" href="../assets/js/select2/select2-bootstrap.css">
+<link rel="stylesheet" href="../assets/js/multiselect/css/multi-select.css">
+
+<script src="../assets/js/select2/select2.min.js"></script>
+<script src="../assets/js/multiselect/js/jquery.multi-select.js"></script>
+<script src="../assets/js/toastr/toastr.min.js"></script>
+
+<!--打印功能-->
+<script src="../assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../assets/js/jquery.jqprint-0.3.js"></script>
+
+<!-- JavaScripts initializations and stuff -->
+<script src="../assets/js/xenon-custom.js"></script>
+
+</body>
+</html>

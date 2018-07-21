@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Xenon Boostrap Admin Panel" />
+    <meta name="author" content="" />
+
+    <title>手播课运营平台</title>
+    <link rel="Shortcut icon" href="../assets/images/icon-shouboke16.ico">
+    <!--<link rel="stylesheet" href="http://fonts.useso.com/css?family=Arimo:400,700,400italic">-->
+    <link rel="stylesheet" href="../assets/css/fonts/linecons/css/linecons.css">
+    <link rel="stylesheet" href="../assets/css/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/xenon-core.css">
+    <link rel="stylesheet" href="../assets/css/xenon-forms.css">
+    <link rel="stylesheet" href="../assets/css/xenon-components.css">
+    <link rel="stylesheet" href="../assets/css/xenon-skins.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <script src="../assets/js/jquery-1.11.1.min.js"></script>
+    <script src="../assets/js/jquery.extend.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/validSystem.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        #title{
+            font-size: 16px;
+        }
+        #info>div{
+            float: left;
+            width: 50%;
+            margin-top: 30px;
+        }
+        #major{
+            margin-top: 30px;
+        }
+        #major span{
+            float: left;
+        }
+        #major p{
+            float: left;
+            width: 400px;
+        }
+        #idPhoto,#expPhoto{
+            margin-top: 30px;
+            clear: left;
+        }
+        #idPhoto>span,#expPhoto>span{
+            float: left;
+        }
+        #idPhoto>div,#expPhoto>div{
+            /*float: left;*/
+            width: 600px;
+        }
+        #idPhoto img,#expPhoto img{
+            width: 100px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        #buttons>button{
+            margin-left: 100px;
+        }
+        #buttons{
+            margin-top: 50px;
+            float: left;
+        }
+        .row{
+            margin-left: 30px;
+        }
+        .page-container .main-content{
+            position: static;
+        }
+    </style>
+</head>
+<body class="page-body">
+
+<div class="settings-pane">
+
+    <a href="#" data-toggle="settings-pane" data-animate="true">
+        &times;
+    </a>
+
+    <div class="settings-pane-inner">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="user-info">
+
+                    <div class="user-image">
+                        <a href="extra-profile.html">
+                            <img src="../assets/images/user-2.png" class="img-responsive img-circle" />
+                        </a>
+                    </div>
+
+                    <div class="user-details">
+
+                        <h3>
+                            <a href="extra-profile.html">John Smith</a>
+
+                            <!-- Available statuses: is-online, is-idle, is-busy and is-offline -->
+                            <span class="user-status is-online"></span>
+                        </h3>
+
+                        <p class="user-title">Web Developer</p>
+
+                        <div class="user-links">
+                            <a href="extra-profile.html" class="btn btn-primary">Edit Profile</a>
+                            <a href="extra-profile.html" class="btn btn-success">Upgrade</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-8 link-blocks-env">
+
+                <div class="links-block left-sep">
+                    <h4>
+                        <span>Notifications</span>
+                    </h4>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk1" />
+                            <label for="sp-chk1">Messages</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk2" />
+                            <label for="sp-chk2">Events</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk3" />
+                            <label for="sp-chk3">Updates</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="cbr cbr-primary" checked="checked" id="sp-chk4" />
+                            <label for="sp-chk4">Server Uptime</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="links-block left-sep">
+                    <h4>
+                        <a href="#">
+                            <span>Help Desk</span>
+                        </a>
+                    </h4>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Support Center
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Submit a Ticket
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Domains Protocol
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-angle-right"></i>
+                                Terms of Service
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+
+    <!-- Add "fixed" class to make the sidebar fixed always to the browser viewport. -->
+    <!-- Adding class "toggle-others" will keep only one menu item open at a time. -->
+    <!-- Adding class "collapsed" collapse sidebar root elements and show only icons. -->
+    <div class="sidebar-menu toggle-others fixed">
+
+        <div class="sidebar-menu-inner">
+
+            <header class="logo-env">
+
+                <!-- logo -->
+                <div class="logo">
+                    <a href="javascript:void(0)" class="logo-expanded">
+                        <img src="../assets/images/icon220x60.png" width="160" alt="" />
+                    </a>
+
+                    <a  href="javascript:void(0)" class="logo-collapsed">
+                        <img src="../assets/images/icon60.png" width="40" alt="" />
+                    </a>
+                </div>
+
+                <!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+                <div class="mobile-menu-toggle visible-xs">
+                    <!--<a href="#" data-toggle="user-info-menu">-->
+                    <!--<i class="fa-bell-o"></i>-->
+                    <!--<span class="badge badge-success">7</span>-->
+                    <!--</a>-->
+
+                    <a href="#" data-toggle="mobile-menu">
+                        <i class="fa-bars"></i>
+                    </a>
+                </div>
+
+                <!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
+                <!--<div class="settings-icon">-->
+                <!--<a href="#" data-toggle="settings-pane" data-animate="true">-->
+                <!--<i class="linecons-cog"></i>-->
+                <!--</a>-->
+                <!--</div>-->
+            </header>
+
+            <ul id="main-menu" class="main-menu">
+                <!-- add class "multiple-expanded" to allow multiple submenus to open -->
+                <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="main-content">
+
+        <!-- User Info, Notifications and Menu Bar -->
+        <nav class="navbar user-info-navbar" role="navigation">
+            <!-- Right links for user info navbar -->
+            <ul class="user-info-menu right-links list-inline list-unstyled">
+                <li class="dropdown user-profile">
+                    <a href="#" data-toggle="dropdown">
+                        <img src="../assets/images/user-4.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
+							<span>
+								<span id="username"></span>
+								<i class="fa-angle-down"></i>
+							</span>
+                    </a>
+                    <ul class="dropdown-menu user-profile-menu list-unstyled" style="width:126px">
+                        <li>
+                            <a href="../editpwd.html" id="editpwd">
+                                <i class="fa-eyedropper"></i>
+                                修改密码
+                            </a>
+                        </li>
+                        <li class="last">
+                            <a href="../login.html" id="logout">
+                                <i class="fa-lock"></i>
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <script>
+                    $(function(){
+                        $("#username").html($.fn.getSession('username'));
+                        $("#logout").click(function(){//退出登录保留记住的用户,密码,token过期
+                            $.fn.setSession('token',null);
+                        })
+                    })
+                </script>
+            </ul>
+
+        </nav>
+        <div class="row">
+            <div id="title">
+                <span>XX讲师申请单</span>
+            </div>
+            <div id="info" class="col-sm-6">
+                <div>真实姓名：</div>
+                <div>手机号码：</div>
+                <div>教学领域：</div>
+                <div>申请时间：</div>
+                <div>证件类型：</div>
+                <div>证件号码：</div>
+            </div>
+            <div id="major" class="col-sm-6" style="clear: left">
+                <span>专业介绍：</span>
+                <p>ewffegegergreg</p>
+            </div>
+            <div id="idPhoto" class="col-sm-6">
+                <span>证件照</span>
+                <div>
+                </div>
+            </div>
+            <div id="expPhoto" class="col-sm-6">
+                <span>资质证书</span>
+                <div></div>
+            </div>
+            <div id="buttons" style="clear: left">
+                <button id="pass" class="btn btn-default audit">通过</button>
+                <button id="reject" class="btn btn-default" data-toggle="modal" data-target="#rejectReason">拒绝</button>
+            </div>
+            <div class="col-sm-12">
+                <!-- Removing search and results count filter -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="margin-bottom: 15px">审核记录</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered table-striped" id="auditLogs">
+                            <thead>
+                            <tr>
+                                <th>申请人</th>
+                                <th>申请时间</th>
+                                <th>审核结果</th>
+                                <!--<th>类型</th>-->
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tab_delete" class="middle-align">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Footer -->
+        <footer class="main-footer footer-type-1">
+
+            <div class="footer-inner">
+
+                <!-- Add your copyright text here -->
+                <div class="footer-text">
+                    &copy; 2016
+                    <strong>LYCAM+</strong>
+                </div>
+
+
+                <!-- Go to Top Link, just add rel="go-top" to any link to add this functionality -->
+                <div class="go-up">
+
+                    <a href="#" rel="go-top">
+                        <i class="fa-angle-up"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </footer>
+        <!--提现记录-->
+    </div>
+
+    <div class="page-loading-overlay">
+        <div class="loader-2"></div>
+    </div>
+</div>
+<!--审核原因-->
+<div class="modal fade" id="reason">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">原因</h4>
+            </div>
+            <div class="modal-body">
+                <div id="reasonDis" class="panel-body">
+
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--拒绝原因-->
+<div class="modal fade" id="rejectReason">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">拒绝原因</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="title" placeholder="请输入拒绝原因">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" id="doReject" class="audit btn btn-primary">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Imported styles on this page -->
+<link rel="stylesheet" href="../assets/css/fonts/meteocons/css/meteocons.css">
+<link rel="stylesheet" href="../assets/css/zoom.css"/>
+<!-- Bottom Scripts -->
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/TweenMax.min.js"></script>
+<script src="../assets/js/resizeable.js"></script>
+<script src="../assets/js/joinable.js"></script>
+<script src="../assets/js/xenon-api.js"></script>
+<script src="../assets/js/xenon-toggles.js"></script>
+
+
+<!--绘制表格-->
+<script src="../assets/js/datatables/js/jquery.dataTables.min.js"></script>
+<script src="../assets/js/datatables/dataTables.bootstrap.js"></script>
+<script src="../assets/js/datatables/yadcf/jquery.dataTables.yadcf.js"></script>
+<script src="../assets/js/datatables/tabletools/dataTables.tableTools.min.js"></script>
+
+
+<!-- Imported styles on this page -->
+<!--<link rel="stylesheet" href="../assets/js/daterangepicker/daterangepicker-bs3.css">-->
+<link rel="stylesheet" href="../assets/js/select2/select2.css">
+<link rel="stylesheet" href="../assets/js/select2/select2-bootstrap.css">
+<link rel="stylesheet" href="../assets/js/multiselect/css/multi-select.css">
+
+<script src="../assets/js/select2/select2.min.js"></script>
+<script src="../assets/js/multiselect/js/jquery.multi-select.js"></script>
+<script src="../assets/js/toastr/toastr.min.js"></script>
+
+<!--打印功能-->
+<script src="../assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../assets/js/jquery.jqprint-0.3.js"></script>
+
+<!-- JavaScripts initializations and stuff -->
+<script src="../assets/js/xenon-custom.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/jquery.table2excel.js"></script>
+<script src="../assets/js/zoom.js"></script>
+<script type="text/javascript">
+    $(function(){
+        buildMenu(18);//统一通过menu.js创建菜单
+    })
+    var phone=getUrlRequest()["phone"];
+    var identId;
+    getDetails();
+    function getDetails(){
+        $.ajax({
+            type: 'get',
+            data: {keyWords:phone},
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            url: $.severHttp + "/user/identificates?type=individual&status=identificating",
+            success: function (data) {
+                var data=data.items[0];
+                identId=data.identificate._id;
+                var tags='';
+                for(var i=0;i<data.identificate.tags.length;i++){
+                    tags+=data.identificate.tags[i]+' ';
+                }
+                $('#title span').html(data.displayName+'讲师申请单');
+                $('#info div:first-child').html('真实姓名：'+data.realName);
+                $('#info div:nth-child(2)').html('手机号码：'+data.phone);
+                $('#info div:nth-child(3)').html('教学领域：'+tags);
+                $('#info div:nth-child(4)').html('申请时间：'+formatDate(data.identificate.createdAt,'yyyy-MM-dd HH:mm'));
+                $('#info div:nth-child(5)').html('证件类型：二代身份证');
+                $('#info div:nth-child(6)').html('证件号码：'+data.identificate.ID);
+                $('#major p').html(data.identificate.introduce);
+                var photos='';
+                for(var i=0;i<data.identificate.IDPhotos.length;i++){
+                    photos+='<img src="'+data.identificate.IDPhotos[i]+'" alt="" data-action="zoom"/>';
+                }
+                $('#idPhoto div').html(photos);
+                var expPhotos='';
+                for(var i=0;i<data.identificate.credentials.length;i++){
+                    expPhotos+='<img src="'+data.identificate.credentials[i]+'"  data-action="zoom" alt=""/>';
+                }
+                $('#expPhoto div').html(expPhotos);
+                var array=data.identificate.logs;
+                for(var i=0;i<array.length;i++){
+                    array[i].realName=data.realName;
+                    array[i].createdAt=formatDate(array[i].createdAt,'yyyy-MM-dd HH:mm')
+                }
+                $('#auditLogs').DataTable( {
+                    oLanguage:totableZH,
+                    data: array,
+                    columns: [
+                        { data: 'realName' },
+                        { data: 'createdAt' },
+                        { data: 'status',render:function(data,type,full,meta){
+                            if(data=='pass'){
+                                return '通过';
+                            }else if(data=='reject'){
+                                return '被拒';
+                            }else{
+                                return '审核中';
+                            }
+                        } },
+                        { data: 'reason',render:function(data,type,full,meta){
+                            var reason;
+                            if(data){
+                                reason=data;
+                            }else{
+                                reason='暂无';
+                            }
+                            return "<span class='label label-success reason' reason='"+reason+"' data-toggle='modal' data-target='#reason'>查看原因</span>";
+                        } }
+                    ]
+                } );
+            },
+            error: function (error) {
+                toastr.error("获取信息失败")
+            }
+        })
+    }
+    function getUrlRequest(){
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.split('?')[1];
+            if (str.indexOf("&") != -1) {
+                var strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = decodeURI(strs[i].split("=")[1]);
+                }
+            } else {
+                var key = str.split("=")[0]
+                var value = str.split("=")[1]
+                theRequest[key] = decodeURI(value);
+            }
+        }
+        return theRequest;
+    }
+
+    $(".row").on('click','.reason',function(){
+        var dis=$(this).attr('reason');
+        $('#reasonDis').html(dis);
+    });
+
+    $(document).on('click','.audit',function(e){
+        var id=$(e.target).attr('id');
+        var data={};
+        if(id=='pass'){
+            data.status='pass';
+            audit(data)
+        }else if(id=='doReject'){
+            data.status='reject';
+            data.reason=$('#rejectReason input').val();
+            if(data.reason){
+                audit(data)
+            }else{
+                toastr.error("请填写拒绝原因")
+            }
+        }
+    })
+    function audit(data){
+        $.ajax({
+            type: 'PUT',
+            data: data,
+            headers: {
+                access_token: $.fn.getSession('token')
+            },
+            url: $.severHttp + "/user/individual/"+identId+"/identificate",
+            success: function (data) {
+                toastr.success("操作成功");
+                setTimeout(function(){
+                    location.href='authentication.html';
+                },800)
+            },
+            error: function (error) {
+                toastr.error("操作失败")
+            }
+        })
+    }
+</script>
+</body>
+</html>

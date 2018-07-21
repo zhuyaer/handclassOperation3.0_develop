@@ -1,0 +1,37 @@
+<!doctype html>
+
+<head>
+
+   <!-- player skin -->
+   <link rel="stylesheet" href="skin/functional.css">
+
+   <!-- site specific styling -->
+   <style>
+   body { font: 12px "Myriad Pro", "Lucida Grande", sans-serif; text-align: center; padding-top: 5%; }
+   .flowplayer { width: 80%; }
+   </style>
+
+   <!-- for video tag based installs flowplayer depends on jQuery 1.7.2+ -->
+   <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+   <!-- include flowplayer -->
+   <script src="flowplayer.min.js"></script>
+
+</head>
+
+<body>
+
+   <!-- the player -->
+   <div class="flowplayer" data-swf="flowplayer.swf" data-ratio="0.4167">
+      <video>
+         <source class="videoRtmp" type="video/flash" src="">
+         <!--<source type="video/mp4" src="https://stream.flowplayer.org/bauhaus.mp4">-->
+      </video>
+   </div>
+
+</body>
+        <script>
+           //$(".videoRtmp").attr("src","rtmp://rtmp-aws.lycam.tv/livestream/5ddbeb41-f0c7-11e5-9e85-0d9b14abe59d");
+//           player.conf.playlist[0].sources[0].src=videoUrl;
+//           player.conf.clip.sources[0].src=videoUrl;
+        </script>
